@@ -9,6 +9,10 @@ output: html_notebook
 
 Include a brief **introduction or motivation** here
 
+College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health and educational behavior. 
+  - Does having early classes influence your likelihood of being depressed, anxious or stressed?
+    - 
+
 ## Section 2. Data Analysis Plan
 
 List any **initial questions** you plan to explore in this project. 
