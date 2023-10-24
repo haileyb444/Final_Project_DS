@@ -13,6 +13,6 @@ Team members:
 
 **Summary**
 
-Our project investigates the main characteristics of popular movies in recent years.
+Our project investigates the main characteristics of a sleep study conducted on college students from a university.
 We will be using the data available at: 
 <https://github.com/reisanar/datasets/blob/master/SleepStudy.csv> 
