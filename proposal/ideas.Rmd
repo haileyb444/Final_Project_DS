@@ -3,15 +3,20 @@ title: "Project Proposal"
 output: html_notebook
 ---
 
-(notice that you can reuse some of the sections below for the final project report)
-
 ## Section 1. Introduction
 
 Include a brief **introduction or motivation** here
 
-College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health and educational behavior. 
+College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and educational behavior. 
+
+**Edit questions**
   - Does having early classes influence your likelihood of being depressed, anxious or stressed?
-    - 
+  - Does the quantity and quality of sleep influence an individual's likeliness to drink alcohol?
+  - Is a "night owl" more likely to be depressed, anxious, or stressed compared to an early riser?
+  
+Let's explore and answer these questions.
+
+Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
 ## Section 2. Data Analysis Plan
 
