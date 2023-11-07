@@ -4,9 +4,6 @@ output: html_notebook
 ---
 
 
-# Project Proposal
-
-
 ## Section 1. Introduction
 
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
