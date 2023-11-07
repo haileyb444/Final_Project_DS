@@ -9,8 +9,6 @@ output: html_notebook
 
 ## Section 1. Introduction
 
-Include a brief **introduction or motivation** here
-
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
 
 
@@ -45,9 +43,8 @@ Our project investigates 254 students who were surveyed for this sleep study inc
 
 ## Section 3. Data
 
-Include a brief **description of your dataset** (source, available attributes, format, etc.)
+This dataset was obtained from the `SleepStudy` dataset provided through Professor Sanchez-Arias' github datasets repository. 
 
-This dataset was obtained from the `SleepStudy` dataset provided through Professor Sanchez-Arias' github datasets repository.   
 
 |Variable               |Description|
 |:----------------------|:---------------------------------------------------------|
@@ -70,7 +67,7 @@ This dataset was obtained from the `SleepStudy` dataset provided through Profess
 |Happiness              |Measure of degree of happiness                            |
 |AlcoholUse             |Self-reported: Abstain, Light, Moderate, or Heavy         |
 |Drinks                 |Number of alcoholic drinks per week                       |
-|WeekdayBed             |Average wqeekday bedtime (24.0 = midnight)                |
+|WeekdayBed             |Average weekday bedtime (24.0 = midnight)                 |
 |WeekdayRise            |Average weekday rise time (8.0 = 8am)                     |
 |WeekdaySleep           |Average hours of sleep on weekdays                        |
 |WeekendBed             |Average weekend bedtime (24.0 = midnight)                 |
