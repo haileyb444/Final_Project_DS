@@ -42,6 +42,8 @@ Our project investigates 254 students who were surveyed for this sleep study inc
 
 This dataset was obtained from the `SleepStudy` dataset provided through Professor Sanchez-Arias' github datasets repository. 
 
+We plan to analyze the dataset and create relevant graphs to represent the data by each demographic. We then want to use visualizations to determine information that answers our overall question, including the use of `tidyverse` packages such as `ggplot` and `dplyr`.
+
 
 |Variable               |Description|
 |:----------------------|:---------------------------------------------------------|
