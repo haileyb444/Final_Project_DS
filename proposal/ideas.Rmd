@@ -11,32 +11,32 @@ output: html_notebook
 
 Include a brief **introduction or motivation** here
 
-College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance.
+College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover the [Insert idea question here].
 
 **Edit questions**
 
   - What factors influence college students academic performance the most? Anxiety? Depression? Drinking habits? Sleep habits? Sleep quality? etc. Does this form an inverse relationship between these factors and academic performance, where these factors worsen as academic performance does?
-  - Does having early classes influence your likelihood of being depressed, anxious or stressed?
-  - Does the quantity and quality of sleep influence an individual's likeliness to drink alcohol?
-  - Is a "night owl" more likely to be depressed, anxious, or stressed compared to an early riser?
+  
   
 Let's explore and answer these questions.
 
 Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
 ## Section 2. Data Analysis Plan
-
-List any **initial questions** you plan to explore in this project. 
-
-
-**Edit questions**
-  - What factors influence college students academic performance the most? Anxiety? Depression? Drinking habits? Sleep habits? Sleep quality? etc. Does this form an inverse relationship between these factors and academic performance, where these factors worsen as academic performance does?
-  - Does having early classes influence your likelihood of being depressed, anxious or stressed?
-  - Does the quantity and quality of sleep influence an individual's likeliness to drink alcohol?
-  - Is a "night owl" more likely to be depressed, anxious, or stressed compared to an early riser?
+   
+  - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (Drinking, stress, depression, anxiety, etc.) and is there a correlation between the number hrs slept and cognitive function scores on the skill test?
+  
+      - How does a student's alcohol use influence their sleep quality?
+      - How does a student's mental health influence their sleep quality?
+      - How does a student's sleep tendencies influence their sleep quality?
+      - How does a student's happiness influence their sleep quality?
+      - How does the number of early classes influence students' sleep quality?
+      - What are the defining characteristics of the distributions?
+      - Do certain groups have better academic performance or fewer missed classes compared to others?
+      - Do any clusters exhibit particularly extreme values in certain variables (Ex. very high stress, very low cognitive function, etc.)?
 
 ## Section 3. Data
 
 Include a brief **description of your dataset** (source, available attributes, format, etc.)
-
+This dataset was obtained 
 
