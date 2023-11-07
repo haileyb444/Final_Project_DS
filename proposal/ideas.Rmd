@@ -26,14 +26,14 @@ Our project investigates 254 students who were surveyed for this sleep study inc
    
   - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (Drinking, stress, depression, anxiety, etc.) and is there a correlation between the number hrs slept and cognitive function scores on the skill test?
   
-      - How does a student's alcohol use influence their sleep quality?
-      - How does a student's mental health influence their sleep quality?
-      - How does a student's sleep tendencies influence their sleep quality?
-      - How does a student's happiness influence their sleep quality?
-      - How does the number of early classes influence students' sleep quality?
-      - What are the defining characteristics of the distributions?
-      - Do certain groups have better academic performance or fewer missed classes compared to others?
-      - Do any clusters exhibit particularly extreme values in certain variables (Ex. very high stress, very low cognitive function, etc.)?
+    - How does a student's alcohol use influence their sleep quality?
+    - How does a student's mental health influence their sleep quality?
+    - How does a student's sleep tendencies influence their sleep quality?
+    - How does a student's happiness influence their sleep quality?
+    - How does the number of early classes influence students' sleep quality?
+    - What are the defining characteristics of the distributions?
+    - Do certain groups have better academic performance or fewer missed classes compared to others?
+    - Do any clusters exhibit particularly extreme values in certain variables (Ex. very high stress, very low cognitive function, etc.)?
 
 ## Section 3. Data
 
