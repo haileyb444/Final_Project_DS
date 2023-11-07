@@ -25,7 +25,6 @@ Our project investigates 254 students who were surveyed for this sleep study inc
 ## Section 2. Data Analysis Plan
    
   - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (Drinking, stress, depression, anxiety, etc.) and is there a correlation between the number hrs slept and cognitive function scores on the skill test?
-  
     - How does a student's alcohol use influence their sleep quality?
     - How does a student's mental health influence their sleep quality?
     - How does a student's sleep tendencies influence their sleep quality?
