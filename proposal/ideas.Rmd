@@ -3,8 +3,11 @@ title: "Project Proposal"
 output: html_notebook
 ---
 
+<<<<<<< HEAD
 # Project Proposal
 
+=======
+>>>>>>> 69a991db2ba904366ea4a7be12ceafc405285ddc
 ## Section 1. Introduction
 
 Include a brief **introduction or motivation** here
@@ -12,7 +15,10 @@ Include a brief **introduction or motivation** here
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and educational behavior. 
 
 **Edit questions**
+<<<<<<< HEAD
   - What factors influence college students academic performance the most? Anxiety? Depression? Drinking habits? Sleep habits? Sleep quality? etc. Does this form an inverse relationship between these factors and academic performance, where these factors worsen as academic performance does?
+=======
+>>>>>>> 69a991db2ba904366ea4a7be12ceafc405285ddc
   - Does having early classes influence your likelihood of being depressed, anxious or stressed?
   - Does the quantity and quality of sleep influence an individual's likeliness to drink alcohol?
   - Is a "night owl" more likely to be depressed, anxious, or stressed compared to an early riser?
@@ -25,6 +31,7 @@ Our project investigates 254 students who were surveyed for this sleep study inc
 
 List any **initial questions** you plan to explore in this project. 
 
+<<<<<<< HEAD
 **Edit questions**
   - What factors influence college students academic performance the most? Anxiety? Depression? Drinking habits? Sleep habits? Sleep quality? etc. Does this form an inverse relationship between these factors and academic performance, where these factors worsen as academic performance does?
   - Does having early classes influence your likelihood of being depressed, anxious or stressed?
@@ -35,3 +42,8 @@ List any **initial questions** you plan to explore in this project.
 
 Include a brief **description of your dataset** (source, available attributes, format, etc.)
 
+=======
+## Section 3. Data
+
+Include a brief **description of your dataset** (source, available attributes, format, etc.)
+>>>>>>> 69a991db2ba904366ea4a7be12ceafc405285ddc
