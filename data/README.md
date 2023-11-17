@@ -1,4 +1,4 @@
-# Data Description: Sleep study on college students data
+# Data Description: Sleep Study on College Students Data
 
 (this is an example only. Edit this file as you see fit. It is recommended that you also include a copy of the original data used for this project in this folder - typically in `.csv` format)
 
