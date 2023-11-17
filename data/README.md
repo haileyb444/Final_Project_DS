@@ -12,7 +12,7 @@ Below we include some basic statistics for this datasets, including dimensions a
 The title of this dataset is "SleepStudy" and is comprised of 27 variables (columns) and 253 observations (rows) with each value in its own cell. Therefore, this is a tidy dataset. 
 
 
-![SleepStudy Summary](C:\Users\haile\OneDrive\Documents\Intro to Data Science\SleepStudy_Summary.png)
+
 
 
 
