@@ -15,6 +15,7 @@ The title of this dataset is "SleepStudy" and is comprised of 27 variables (colu
 
 
 
+![SleepStudy_Summary](https://github.com/haileyb444/Final_Project_DS/assets/143001256/fc4a893b-2c36-4d92-901c-719f2a2e1f83)
 
 
 
