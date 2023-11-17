@@ -1,7 +1,10 @@
 ---
-title: "Final Report for Intro to Data Science"
+title: "Exploring and Analyzing the Effects of Sleep Patterns on College Students"
 output: html_notebook
+   
 ---
+
+##Introduction 
 
 This is where the final project report write-up goes. 
 
@@ -11,3 +14,38 @@ Before you submit, make sure everything runs as expected.
 You can add sections as you see fit. Make sure you have a section called "Introduction" at the beginning and a section called "Conclusion" at the end. The rest is up to you!
 
 _Make use of your knowledge of Markdown to appropriately typeset this report!_
+
+
+
+## Conclusion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
