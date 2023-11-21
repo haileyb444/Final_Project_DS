@@ -1794,16 +1794,116 @@ library(ggplot2)</code></pre>
 </div>
 <div id="data-description" class="section level1">
 <h1>Data Description</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU2xlZXBTdHVkeSA8LSByZWFkLmNzdihcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9oYWlsZXliNDQ0L2RhdGFzZXRzL21hc3Rlci9TbGVlcFN0dWR5LmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>SleepStudy &lt;- read.csv(&quot;https://raw.githubusercontent.com/haileyb444/datasets/master/SleepStudy.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX24oU2xlZXBTdHVkeSwgMTApXG5gYGAifQ== -->
+<pre class="r"><code>sample_n(SleepStudy, 10)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTAsIm5jb2wiOjI3LCJzdW1tYXJ5Ijp7IkRlc2NyaXB0aW9uIjpbImRmIFsxMCDDlyAyN10iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCcVZXUFd3VFNSU2UyRjQ3M2ppSmdZaEFvaEE3c1JBcDRnS1FTTUtoakNGSEtFTEl6eUYrUkxQWVE3ektadGZzcmhPU0tzM1ZOTmNjSGVLS3EwNDYwVkNnQzRMMjdvcHJ1T0lhR2lRRUxXMjRtWjMzMXJPTEV4RVlhVHp6ZnI0Mzc4MjhmYzlMTXpmUDZEZDFRa2lTcEpJZEpLbnhMZEd1LzNCNWZJS1FWSUlUSFNSRnNtSjl3SldPOE0wZ245MTg2b0d3TlhHb2U2UlJYeGhNS1ppVXdrc0VYc2g5UHRDWEI2Zm1ESGNWOXBsNVp2cDE1Z0tadkxaaHRaZnNyZmpGbUpCc3VaOVVRa3JFd2t3b1BQVjZVTC9kdFNDdlIralQ3UHNmVHp4Yi9FQlRra256c0diT0JJUHE5NElSeWpNdkg5NDU5ZkVWN1h3eisxdmYxaHZhQS9KMGVBYjZrWWFaSkswaHpzNHB6NkdoSHp2L0NMTXZIMDYvMWk4MG5yeldkLzU0dGlnOG0vNWQramY5NG9tUS9MTHpYR2pkR1p2K054QXZoZksvcGY3T08wa3JmbWh3WGhlZm5VQ0wvV0dGVGl2Nm1CWWFUREg2UVYrOWM5VHZBcjBPc0NQV3JLS1BzYUorSHU0a0NkZ002R1lCZndSa2VkSkt4N1R0dUd1RzlhMlV4OWFaeTREcVhITnF6RFY4ZGdBN1VhKyt4a0k3NmpNN0VUOFA3bGVxYnE3VXY5R25MN1hSVHEvMTFzT3dDdWxSeUxmVGZJN0RXeCtQNVo0WUo0Qi9qTThCK0Y0TzhWa0VlMFB4VjdnYXZUM3RDalBXTi9jU3puRjMvVDJFK3lydml3UmhLNUNjRWpoK1lEMlEyUGh4NlFTTDBOU2ZZdnhGSjUvS29qUDFWaGFWQ1Z5QlAvRWl1Q0Y2WHBTSUMvZnBPY0FoZjJJYjdoRHNGZ0JmZ21JMkN1dkluTVNOQUQwTTZ3Q3N4ZDZnR05FQ0ZMZWlQQ2UwMncvbkZuNFc0eEVkUUZxZVQwZWtFM1FROEoxQUYzNE5paGNkQXJwSW92NU9BbjRLNGducDdVaDhkT3F4TEw3ZmtaaGVVZkluYWV3ZVFINFMxdEpQVzZKODA1UGdmd240QlZsOTZWaTVUeWpRRW9uaVJtUDNld3pqQUhrUjdHTDhlTzV4V2JScENleU9nbnowb213bWhaamRmdkNqOEY4QXBFUHdMZ1ZvVm5qT0FEU2p2ajVKRjJWVG9NT3lHU0NldEcrTys0eklueEROTnRhWVIrUlhONGpmK2l5emEySGJ6bDZ5RE0rN3hZeXdqNHYvRDYybTN6M2ZYUHZlY0szTlFBK1krbWVjNU94Q0JSRUJuM2xYVGY1YkEyYnZKV2ZGTm4zVHNXOTdWU2Vza1BrRngzR1hMY1lhaTAzRE1uMzgrSHRuV01ObG5zZjFseFgxWE1WK1lESi9VK1YxTGZ0Q1UyWGxGYlJ2K0UxMHNodmhLak10OFZnZVppckxxcW5zRmFQUk1PMldnbDZ4cWs3ZHNhNTdZWldmY1UxN05aVGZZR3kxWm14ZURFUHZBczZTR1VKeXdBb2lWNEg4WldKQXpva0RPVXNGNWlxODVSZ3JMR0tzWWxuem9yQ0ovMk9SbE1pNnprWVowMExrVmdJeVdJL25UalY0WHBrN3lOUnJobStVNzdrY3o2bmRHQ1RqTk1RTGMxQkMvQlhRWXVBT044Ym9iZHJDazlwNHRkNjBWOGZQeGpLOUcvYTZzaCtVUnlZK2dTa05INEhaSy95WjBIZkx1TXN3ZzN0NHhFSEE1UVovS093RE91ZDZaZC94dzM2b1Z4MExPVUZzWlBkL01LbWZwdkFMQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Gender"],"name":[1],"type":["int"],"align":["right"]},{"label":["ClassYear"],"name":[2],"type":["int"],"align":["right"]},{"label":["LarkOwl"],"name":[3],"type":["chr"],"align":["left"]},{"label":["NumEarlyClass"],"name":[4],"type":["int"],"align":["right"]},{"label":["EarlyClass"],"name":[5],"type":["int"],"align":["right"]},{"label":["GPA"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["ClassesMissed"],"name":[7],"type":["int"],"align":["right"]},{"label":["CognitionZscore"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["PoorSleepQuality"],"name":[9],"type":["int"],"align":["right"]},{"label":["DepressionScore"],"name":[10],"type":["int"],"align":["right"]},{"label":["AnxietyScore"],"name":[11],"type":["int"],"align":["right"]},{"label":["StressScore"],"name":[12],"type":["int"],"align":["right"]},{"label":["DepressionStatus"],"name":[13],"type":["chr"],"align":["left"]},{"label":["AnxietyStatus"],"name":[14],"type":["chr"],"align":["left"]},{"label":["Stress"],"name":[15],"type":["chr"],"align":["left"]},{"label":["DASScore"],"name":[16],"type":["int"],"align":["right"]},{"label":["Happiness"],"name":[17],"type":["int"],"align":["right"]},{"label":["AlcoholUse"],"name":[18],"type":["chr"],"align":["left"]},{"label":["Drinks"],"name":[19],"type":["int"],"align":["right"]},{"label":["WeekdayBed"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["WeekdayRise"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["WeekdaySleep"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["WeekendBed"],"name":[23],"type":["dbl"],"align":["right"]},{"label":["WeekendRise"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["WeekendSleep"],"name":[25],"type":["dbl"],"align":["right"]},{"label":["AverageSleep"],"name":[26],"type":["dbl"],"align":["right"]},{"label":["AllNighter"],"name":[27],"type":["int"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"Lark","4":"3","5":"1","6":"3.24","7":"6","8":"-0.29","9":"5","10":"4","11":"11","12":"16","13":"normal","14":"moderate","15":"high","16":"31","17":"0","18":"Moderate","19":"12","20":"26.80","21":"8.45","22":"5.95","23":"25.50","24":"8.25","25":"6.00","26":"5.96","27":"1"},{"1":"1","2":"4","3":"Neither","4":"0","5":"0","6":"2.50","7":"6","8":"0.36","9":"4","10":"2","11":"5","12":"3","13":"normal","14":"normal","15":"normal","16":"10","17":"30","18":"Heavy","19":"10","20":"25.70","21":"10.10","22":"8.30","23":"26.75","24":"11.25","25":"8.75","26":"8.43","27":"0"},{"1":"1","2":"1","3":"Owl","4":"1","5":"1","6":"4.00","7":"3","8":"-0.12","9":"11","10":"5","11":"1","12":"3","13":"normal","14":"normal","15":"normal","16":"9","17":"25","18":"Moderate","19":"9","20":"26.90","21":"9.60","22":"6.70","23":"25.50","24":"10.29","25":"8.79","26":"7.30","27":"1"},{"1":"0","2":"1","3":"Neither","4":"2","5":"1","6":"2.90","7":"0","8":"0.07","9":"8","10":"5","11":"6","12":"11","13":"normal","14":"normal","15":"normal","16":"22","17":"24","18":"Light","19":"5","20":"24.90","21":"9.15","22":"8.25","23":"26.50","24":"11.30","25":"9.00","26":"8.46","27":"0"},{"1":"0","2":"4","3":"Neither","4":"0","5":"0","6":"3.30","7":"0","8":"0.13","9":"5","10":"0","11":"1","12":"7","13":"normal","14":"normal","15":"normal","16":"8","17":"26","18":"Moderate","19":"6","20":"24.70","21":"9.10","22":"9.00","23":"24.50","24":"10.25","25":"8.25","26":"8.79","27":"0"},{"1":"1","2":"2","3":"Owl","4":"0","5":"0","6":"2.50","7":"1","8":"-0.11","9":"11","10":"23","11":"9","12":"18","13":"severe","14":"moderate","15":"high","16":"50","17":"12","18":"Moderate","19":"14","20":"24.75","21":"7.80","22":"6.85","23":"26.63","24":"8.42","25":"6.29","26":"6.69","27":"0"},{"1":"0","2":"4","3":"Owl","4":"0","5":"0","6":"2.97","7":"12","8":"0.38","9":"18","10":"18","11":"18","12":"9","13":"moderate","14":"severe","15":"normal","16":"45","17":"17","18":"Light","19":"3","20":"27.44","21":"6.55","22":"3.00","23":"28.00","24":"12.59","25":"10.09","26":"5.02","27":"0"},{"1":"0","2":"2","3":"Neither","4":"2","5":"1","6":"3.11","7":"4","8":"0.07","9":"8","10":"0","11":"0","12":"6","13":"normal","14":"normal","15":"normal","16":"6","17":"33","18":"Light","19":"2","20":"23.80","21":"8.53","22":"8.33","23":"25.50","24":"10.00","25":"9.50","26":"8.66","27":"0"},{"1":"0","2":"3","3":"Neither","4":"2","5":"1","6":"3.80","7":"1","8":"0.24","9":"5","10":"2","11":"4","12":"19","13":"normal","14":"normal","15":"high","16":"25","17":"31","18":"Moderate","19":"5","20":"24.75","21":"8.20","22":"7.25","23":"26.13","24":"11.25","25":"9.63","26":"7.93","27":"0"},{"1":"1","2":"4","3":"Neither","4":"0","5":"0","6":"2.75","7":"5","8":"-0.81","9":"6","10":"2","11":"1","12":"3","13":"normal","14":"normal","15":"normal","16":"6","17":"29","18":"Light","19":"10","20":"24.50","21":"8.90","22":"8.50","23":"25.25","24":"9.75","25":"8.25","26":"8.43","27":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[27]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="exploratory-data-analysis" class="section level1">
 <h1>Exploratory Data Analysis</h1>
+<p>First to take an initial look at the basic data statistics…</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShTbGVlcFN0dWR5KVxuYGBgIn0= -->
+<pre class="r"><code>summary(SleepStudy)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBHZW5kZXIgICAgICAgICBDbGFzc1llYXIgICAgICAgTGFya093bCAgICAgICAgIFxuIE1pbi4gICA6MC4wMDAwICAgTWluLiAgIDoxLjAwMCAgIExlbmd0aDoyNTMgICAgICAgIFxuIDFzdCBRdS46MC4wMDAwICAgMXN0IFF1LjoyLjAwMCAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1lZGlhbiA6MC4wMDAwICAgTWVkaWFuIDoyLjAwMCAgIE1vZGUgIDpjaGFyYWN0ZXIgIFxuIE1lYW4gICA6MC40MDMyICAgTWVhbiAgIDoyLjQ3OCAgICAgICAgICAgICAgICAgICAgIFxuIDNyZCBRdS46MS4wMDAwICAgM3JkIFF1LjozLjAwMCAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6MS4wMDAwICAgTWF4LiAgIDo0LjAwMCAgICAgICAgICAgICAgICAgICAgIFxuIE51bUVhcmx5Q2xhc3MgICAgIEVhcmx5Q2xhc3MgICAgICAgICBHUEEgICAgICAgXG4gTWluLiAgIDowLjAwMCAgIE1pbi4gICA6MC4wMDAgICBNaW4uICAgOjIuMDAwICBcbiAxc3QgUXUuOjAuMDAwICAgMXN0IFF1LjowLjAwMCAgIDFzdCBRdS46My4wMDAgIFxuIE1lZGlhbiA6Mi4wMDAgICBNZWRpYW4gOjEuMDAwICAgTWVkaWFuIDozLjMwMCAgXG4gTWVhbiAgIDoxLjczNSAgIE1lYW4gICA6MC42NjQgICBNZWFuICAgOjMuMjQ0ICBcbiAzcmQgUXUuOjMuMDAwICAgM3JkIFF1LjoxLjAwMCAgIDNyZCBRdS46My41MDAgIFxuIE1heC4gICA6NS4wMDAgICBNYXguICAgOjEuMDAwICAgTWF4LiAgIDo0LjAwMCAgXG4gQ2xhc3Nlc01pc3NlZCAgICBDb2duaXRpb25ac2NvcmUgICAgIFBvb3JTbGVlcFF1YWxpdHlcbiBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6LTEuNjJlKzAwICAgTWluLiAgIDogMS4wMDAgIFxuIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjotNC44MGUtMDEgICAxc3QgUXUuOiA0LjAwMCAgXG4gTWVkaWFuIDogMS4wMDAgICBNZWRpYW4gOi0xLjAwZS0wMiAgIE1lZGlhbiA6IDYuMDAwICBcbiBNZWFuICAgOiAyLjIwOSAgIE1lYW4gICA6LTMuOTVlLTA1ICAgTWVhbiAgIDogNi4yNTcgIFxuIDNyZCBRdS46IDMuMDAwICAgM3JkIFF1LjogNC40MGUtMDEgICAzcmQgUXUuOiA4LjAwMCAgXG4gTWF4LiAgIDoyMC4wMDAgICBNYXguICAgOiAxLjk2ZSswMCAgIE1heC4gICA6MTguMDAwICBcbiBEZXByZXNzaW9uU2NvcmUgICBBbnhpZXR5U2NvcmUgICAgIFN0cmVzc1Njb3JlICAgIFxuIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMC4wMDAgICBNaW4uICAgOiAwLjAwMCAgXG4gMXN0IFF1LjogMS4wMDAgICAxc3QgUXUuOiAxLjAwMCAgIDFzdCBRdS46IDMuMDAwICBcbiBNZWRpYW4gOiAzLjAwMCAgIE1lZGlhbiA6IDQuMDAwICAgTWVkaWFuIDogOC4wMDAgIFxuIE1lYW4gICA6IDUuMjAyICAgTWVhbiAgIDogNS4zNzIgICBNZWFuICAgOiA5LjQ2NiAgXG4gM3JkIFF1LjogNy4wMDAgICAzcmQgUXUuOiA4LjAwMCAgIDNyZCBRdS46MTQuMDAwICBcbiBNYXguICAgOjM1LjAwMCAgIE1heC4gICA6MjYuMDAwICAgTWF4LiAgIDozNy4wMDAgIFxuIERlcHJlc3Npb25TdGF0dXMgICBBbnhpZXR5U3RhdHVzICAgICAgICAgU3RyZXNzICAgICAgICAgXG4gTGVuZ3RoOjI1MyAgICAgICAgIExlbmd0aDoyNTMgICAgICAgICBMZW5ndGg6MjUzICAgICAgICBcbiBDbGFzcyA6Y2hhcmFjdGVyICAgQ2xhc3MgOmNoYXJhY3RlciAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNb2RlICA6Y2hhcmFjdGVyICAgTW9kZSAgOmNoYXJhY3RlciAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgREFTU2NvcmUgICAgICAgSGFwcGluZXNzICAgICAgQWxjb2hvbFVzZSAgICAgICBcbiBNaW4uICAgOiAwLjAwICAgTWluLiAgIDogMC4wMCAgIExlbmd0aDoyNTMgICAgICAgIFxuIDFzdCBRdS46IDcuMDAgICAxc3QgUXUuOjI0LjAwICAgQ2xhc3MgOmNoYXJhY3RlciAgXG4gTWVkaWFuIDoxNi4wMCAgIE1lZGlhbiA6MjguMDAgICBNb2RlICA6Y2hhcmFjdGVyICBcbiBNZWFuICAgOjIwLjA0ICAgTWVhbiAgIDoyNi4xMSAgICAgICAgICAgICAgICAgICAgIFxuIDNyZCBRdS46MjguMDAgICAzcmQgUXUuOjMwLjAwICAgICAgICAgICAgICAgICAgICAgXG4gTWF4LiAgIDo4Mi4wMCAgIE1heC4gICA6MzUuMDAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgRHJpbmtzICAgICAgICAgV2Vla2RheUJlZCAgICAgV2Vla2RheVJpc2UgICAgXG4gTWluLiAgIDogMC4wMDAgICBNaW4uICAgOjIxLjgwICAgTWluLiAgIDogNS41MDAgIFxuIDFzdCBRdS46IDMuMDAwICAgMXN0IFF1LjoyNC4yMCAgIDFzdCBRdS46IDguMDAwICBcbiBNZWRpYW4gOiA1LjAwMCAgIE1lZGlhbiA6MjQuODAgICBNZWRpYW4gOiA4LjUwMCAgXG4gTWVhbiAgIDogNS41NjkgICBNZWFuICAgOjI0Ljg1ICAgTWVhbiAgIDogOC41ODYgIFxuIDNyZCBRdS46IDguMDAwICAgM3JkIFF1LjoyNS41MCAgIDNyZCBRdS46IDkuMTUwICBcbiBNYXguICAgOjI0LjAwMCAgIE1heC4gICA6MjkuMTAgICBNYXguICAgOjEyLjAyMCAgXG4gIFdlZWtkYXlTbGVlcCAgICAgIFdlZWtlbmRCZWQgICAgIFdlZWtlbmRSaXNlICAgXG4gTWluLiAgIDogMy4wMDAgICBNaW4uICAgOjIxLjUwICAgTWluLiAgIDogNS4yNSAgXG4gMXN0IFF1LjogNy4yMDAgICAxc3QgUXUuOjI0Ljg4ICAgMXN0IFF1LjogOS4yNSAgXG4gTWVkaWFuIDogNy45NTAgICBNZWRpYW4gOjI1LjUwICAgTWVkaWFuIDoxMC4yNSAgXG4gTWVhbiAgIDogNy44NjYgICBNZWFuICAgOjI1LjU4ICAgTWVhbiAgIDoxMC4yMCAgXG4gM3JkIFF1LjogOC42MDAgICAzcmQgUXUuOjI2LjI1ICAgM3JkIFF1LjoxMS4wMCAgXG4gTWF4LiAgIDoxMC45NzAgICBNYXguICAgOjMwLjI1ICAgTWF4LiAgIDoxNS4wMCAgXG4gIFdlZWtlbmRTbGVlcCAgICAgQXZlcmFnZVNsZWVwICAgICAgQWxsTmlnaHRlciAgICBcbiBNaW4uICAgOiA0LjAwMCAgIE1pbi4gICA6IDQuOTUwICAgTWluLiAgIDowLjAwMDAgIFxuIDFzdCBRdS46IDcuMjUwICAgMXN0IFF1LjogNy40MzAgICAxc3QgUXUuOjAuMDAwMCAgXG4gTWVkaWFuIDogOC4yNTAgICBNZWRpYW4gOiA4LjAwMCAgIE1lZGlhbiA6MC4wMDAwICBcbiBNZWFuICAgOiA4LjIxNyAgIE1lYW4gICA6IDcuOTY2ICAgTWVhbiAgIDowLjEzNDQgIFxuIDNyZCBRdS46IDkuMjUwICAgM3JkIFF1LjogOC41OTAgICAzcmQgUXUuOjAuMDAwMCAgXG4gTWF4LiAgIDoxMi43NTAgICBNYXguICAgOjEwLjYyMCAgIE1heC4gICA6MS4wMDAwICBcbiJ9 -->
+<pre><code>     Gender         ClassYear       LarkOwl         
+ Min.   :0.0000   Min.   :1.000   Length:253        
+ 1st Qu.:0.0000   1st Qu.:2.000   Class :character  
+ Median :0.0000   Median :2.000   Mode  :character  
+ Mean   :0.4032   Mean   :2.478                     
+ 3rd Qu.:1.0000   3rd Qu.:3.000                     
+ Max.   :1.0000   Max.   :4.000                     
+ NumEarlyClass     EarlyClass         GPA       
+ Min.   :0.000   Min.   :0.000   Min.   :2.000  
+ 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:3.000  
+ Median :2.000   Median :1.000   Median :3.300  
+ Mean   :1.735   Mean   :0.664   Mean   :3.244  
+ 3rd Qu.:3.000   3rd Qu.:1.000   3rd Qu.:3.500  
+ Max.   :5.000   Max.   :1.000   Max.   :4.000  
+ ClassesMissed    CognitionZscore     PoorSleepQuality
+ Min.   : 0.000   Min.   :-1.62e+00   Min.   : 1.000  
+ 1st Qu.: 0.000   1st Qu.:-4.80e-01   1st Qu.: 4.000  
+ Median : 1.000   Median :-1.00e-02   Median : 6.000  
+ Mean   : 2.209   Mean   :-3.95e-05   Mean   : 6.257  
+ 3rd Qu.: 3.000   3rd Qu.: 4.40e-01   3rd Qu.: 8.000  
+ Max.   :20.000   Max.   : 1.96e+00   Max.   :18.000  
+ DepressionScore   AnxietyScore     StressScore    
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 1.000   1st Qu.: 1.000   1st Qu.: 3.000  
+ Median : 3.000   Median : 4.000   Median : 8.000  
+ Mean   : 5.202   Mean   : 5.372   Mean   : 9.466  
+ 3rd Qu.: 7.000   3rd Qu.: 8.000   3rd Qu.:14.000  
+ Max.   :35.000   Max.   :26.000   Max.   :37.000  
+ DepressionStatus   AnxietyStatus         Stress         
+ Length:253         Length:253         Length:253        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+    DASScore       Happiness      AlcoholUse       
+ Min.   : 0.00   Min.   : 0.00   Length:253        
+ 1st Qu.: 7.00   1st Qu.:24.00   Class :character  
+ Median :16.00   Median :28.00   Mode  :character  
+ Mean   :20.04   Mean   :26.11                     
+ 3rd Qu.:28.00   3rd Qu.:30.00                     
+ Max.   :82.00   Max.   :35.00                     
+     Drinks         WeekdayBed     WeekdayRise    
+ Min.   : 0.000   Min.   :21.80   Min.   : 5.500  
+ 1st Qu.: 3.000   1st Qu.:24.20   1st Qu.: 8.000  
+ Median : 5.000   Median :24.80   Median : 8.500  
+ Mean   : 5.569   Mean   :24.85   Mean   : 8.586  
+ 3rd Qu.: 8.000   3rd Qu.:25.50   3rd Qu.: 9.150  
+ Max.   :24.000   Max.   :29.10   Max.   :12.020  
+  WeekdaySleep      WeekendBed     WeekendRise   
+ Min.   : 3.000   Min.   :21.50   Min.   : 5.25  
+ 1st Qu.: 7.200   1st Qu.:24.88   1st Qu.: 9.25  
+ Median : 7.950   Median :25.50   Median :10.25  
+ Mean   : 7.866   Mean   :25.58   Mean   :10.20  
+ 3rd Qu.: 8.600   3rd Qu.:26.25   3rd Qu.:11.00  
+ Max.   :10.970   Max.   :30.25   Max.   :15.00  
+  WeekendSleep     AverageSleep      AllNighter    
+ Min.   : 4.000   Min.   : 4.950   Min.   :0.0000  
+ 1st Qu.: 7.250   1st Qu.: 7.430   1st Qu.:0.0000  
+ Median : 8.250   Median : 8.000   Median :0.0000  
+ Mean   : 8.217   Mean   : 7.966   Mean   :0.1344  
+ 3rd Qu.: 9.250   3rd Qu.: 8.590   3rd Qu.:0.0000  
+ Max.   :12.750   Max.   :10.620   Max.   :1.0000  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
+</div>
+<div id="future-applications" class="section level2">
+<h2>Future Applications</h2>
+</div>
+<div id="datasets-cited" class="section level2">
+<h2>Datasets Cited</h2>
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmluZyBhbmQgQW5hbHl6aW5nIHRoZSBFZmZlY3RzIG9mIFNsZWVwIFBhdHRlcm5zIG9uIENvbGxlZ2UgU3R1ZGVudHMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCiAgIA0KLS0tDQoNCiMjIFRlYW0gTWVtYmVycw0KDQoqKkhhaWxleSBCYXVlcioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOmhiYXVlcjI3ODNAZmxvcmlkYXBvbHkuZWR1XQ0KDQoqKk5vbGFuIE5ndXllbioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOm5uZ3V5ZW4zMzUzQGZsb3JpZGFwb2x5LmVkdV0NCiANCg0KIyBJbnRyb2R1Y3Rpb24NCg0KQ29sbGVnZSBzdHVkZW50cyBvZnRlbiBoYXZlIGxvdHMgb2YgYXNzaWdubWVudHMgdG8gZG8sIGVhcmx5IGNsYXNzZXMsIGFuZCBtYW55IG90aGVyIGFjdGl2aXRpZXMgdGhhdCBvY2N1cHkgdGhlaXIgdGltZS4gQWxsIG9mIHRoZXNlIGZhY3RvcnMgaW5mbHVlbmNlIHRoZWlyIHNsZWVwIGFuZCB0aGVyZWZvcmUgdGhlaXIgbWVudGFsIGhlYWx0aCwgcGh5c2ljYWwgaGVhbHRoLCBhbmQgYWNhZGVtaWMgcGVyZm9ybWFuY2UuIFdlIHN0cml2ZSB0byBkaXNjb3ZlciBob3cgdGhlc2UgZmFjdG9ycyBpbmZsdWVuY2Ugc3R1ZGVudHMgdGhyb3VnaCB0aGUgZm9sbG93aW5nIHJlc2VhcmNoIHF1ZXN0aW9uOg0KDQoNCiAgIC0gV2hhdCBpcyB0aGUgZGlzdHJpYnV0aW9uIG9mIHNsZWVwIHF1YWxpdHkgYW1vbmcgY29sbGVnZSBzdHVkZW50cyBhbmQgYXJlIHRoZXJlIGFueSBzaWduaWZpY2FudCBmYWN0b3JzIGFmZmVjdGluZyBzbGVlcCBxdWFsaXR5IChEcmlua2luZywgc3RyZXNzLCBkZXByZXNzaW9uLCBhbnhpZXR5LCBldGMuKSBhbmQgaXMgdGhlcmUgYSBjb3JyZWxhdGlvbiBiZXR3ZWVuIHRoZSBudW1iZXIgaHJzIHNsZXB0IGFuZCBjb2duaXRpdmUgZnVuY3Rpb24gc2NvcmVzIG9uIHRoZSBza2lsbCB0ZXN0Pw0KICANCg0KTGV0J3MgZXhwbG9yZSBhbmQgYW5zd2VyIHRoaXMgcXVlc3Rpb24uDQoNCk91ciBwcm9qZWN0IGludmVzdGlnYXRlcyAyNTQgc3R1ZGVudHMgd2hvIHdlcmUgc3VydmV5ZWQgZm9yIHRoaXMgc2xlZXAgc3R1ZHkgaW5jbHVkaW5nIGNoYXJhY3RlcmlzdGljcyBzdWNoIGFzIHRoZSBxdWFudGl0eSBvZiBlYXJseSBjbGFzc2VzIHRha2VuLCBHUEEsIHF1YW50aXR5IGFuZCBxdWFsaXR5IG9mIHNsZWVwLCBkZXByZXNzaW9uIHNjb3JlLCBhbnhpZXR5IHNjb3JlLCBzdHJlc3Mgc2NvcmUsIGV0Yy4gVGhpcyBpcyBvdXIgcHJvamVjdCBmb3IgRm91bmRhdGlvbnMgb2YgRGF0YSBBbmFseXRpY3MgKEZhbGwgMjAyMykgY2xhc3MuDQoNCiMgUHJlcmVxdWlzaXRlcw0KDQpMb2FkIHRoZSBmb2xsb3dpbmcgUiBwYWNrYWdlcyByZXF1aXJlZCBmb3IgdGhlIGRhdGEgYW5hbHlzaXMuLi4NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KGdncGxvdDIpDQpgYGANCg0KDQojIERhdGEgRGVzY3JpcHRpb24NCg0KIyBFeHBsb3JhdG9yeSBEYXRhIEFuYWx5c2lzDQoNCiMjIENvbmNsdXNpb24NCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmluZyBhbmQgQW5hbHl6aW5nIHRoZSBFZmZlY3RzIG9mIFNsZWVwIFBhdHRlcm5zIG9uIENvbGxlZ2UgU3R1ZGVudHMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCiAgIA0KLS0tDQoNCiMjIFRlYW0gTWVtYmVycw0KDQoqKkhhaWxleSBCYXVlcioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOmhiYXVlcjI3ODNAZmxvcmlkYXBvbHkuZWR1XQ0KDQoqKk5vbGFuIE5ndXllbioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOm5uZ3V5ZW4zMzUzQGZsb3JpZGFwb2x5LmVkdV0NCiANCg0KIyBJbnRyb2R1Y3Rpb24NCg0KQ29sbGVnZSBzdHVkZW50cyBvZnRlbiBoYXZlIGxvdHMgb2YgYXNzaWdubWVudHMgdG8gZG8sIGVhcmx5IGNsYXNzZXMsIGFuZCBtYW55IG90aGVyIGFjdGl2aXRpZXMgdGhhdCBvY2N1cHkgdGhlaXIgdGltZS4gQWxsIG9mIHRoZXNlIGZhY3RvcnMgaW5mbHVlbmNlIHRoZWlyIHNsZWVwIGFuZCB0aGVyZWZvcmUgdGhlaXIgbWVudGFsIGhlYWx0aCwgcGh5c2ljYWwgaGVhbHRoLCBhbmQgYWNhZGVtaWMgcGVyZm9ybWFuY2UuIFdlIHN0cml2ZSB0byBkaXNjb3ZlciBob3cgdGhlc2UgZmFjdG9ycyBpbmZsdWVuY2Ugc3R1ZGVudHMgdGhyb3VnaCB0aGUgZm9sbG93aW5nIHJlc2VhcmNoIHF1ZXN0aW9uOg0KDQoNCiAgIC0gV2hhdCBpcyB0aGUgZGlzdHJpYnV0aW9uIG9mIHNsZWVwIHF1YWxpdHkgYW1vbmcgY29sbGVnZSBzdHVkZW50cyBhbmQgYXJlIHRoZXJlIGFueSBzaWduaWZpY2FudCBmYWN0b3JzIGFmZmVjdGluZyBzbGVlcCBxdWFsaXR5IChEcmlua2luZywgc3RyZXNzLCBkZXByZXNzaW9uLCBhbnhpZXR5LCBldGMuKSBhbmQgaXMgdGhlcmUgYSBjb3JyZWxhdGlvbiBiZXR3ZWVuIHRoZSBudW1iZXIgaHJzIHNsZXB0IGFuZCBjb2duaXRpdmUgZnVuY3Rpb24gc2NvcmVzIG9uIHRoZSBza2lsbCB0ZXN0Pw0KICANCg0KTGV0J3MgZXhwbG9yZSBhbmQgYW5zd2VyIHRoaXMgcXVlc3Rpb24uDQoNCk91ciBwcm9qZWN0IGludmVzdGlnYXRlcyAyNTQgc3R1ZGVudHMgd2hvIHdlcmUgc3VydmV5ZWQgZm9yIHRoaXMgc2xlZXAgc3R1ZHkgaW5jbHVkaW5nIGNoYXJhY3RlcmlzdGljcyBzdWNoIGFzIHRoZSBxdWFudGl0eSBvZiBlYXJseSBjbGFzc2VzIHRha2VuLCBHUEEsIHF1YW50aXR5IGFuZCBxdWFsaXR5IG9mIHNsZWVwLCBkZXByZXNzaW9uIHNjb3JlLCBhbnhpZXR5IHNjb3JlLCBzdHJlc3Mgc2NvcmUsIGV0Yy4gVGhpcyBpcyBvdXIgcHJvamVjdCBmb3IgRm91bmRhdGlvbnMgb2YgRGF0YSBBbmFseXRpY3MgKEZhbGwgMjAyMykgY2xhc3MuDQoNCiMgUHJlcmVxdWlzaXRlcw0KDQpMb2FkIHRoZSBmb2xsb3dpbmcgUiBwYWNrYWdlcyByZXF1aXJlZCBmb3IgdGhlIGRhdGEgYW5hbHlzaXMuLi4NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KGdncGxvdDIpDQpgYGANCg0KDQojIERhdGEgRGVzY3JpcHRpb24NCg0KYGBge3J9DQpTbGVlcFN0dWR5IDwtIHJlYWQuY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vaGFpbGV5YjQ0NC9kYXRhc2V0cy9tYXN0ZXIvU2xlZXBTdHVkeS5jc3YiKQ0KYGBgDQoNCmBgYHtyfQ0Kc2FtcGxlX24oU2xlZXBTdHVkeSwgMTApDQpgYGANCg0KIyBFeHBsb3JhdG9yeSBEYXRhIEFuYWx5c2lzDQoNCkZpcnN0IHRvIHRha2UgYW4gaW5pdGlhbCBsb29rIGF0IHRoZSBiYXNpYyBkYXRhIHN0YXRpc3RpY3MuLi4NCg0KYGBge3J9DQpzdW1tYXJ5KFNsZWVwU3R1ZHkpDQpgYGANCiMjIENvbmNsdXNpb24NCg0KIyMgRnV0dXJlIEFwcGxpY2F0aW9ucw0KDQojIyBEYXRhc2V0cyBDaXRlZA0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0K</div>
 
 
 

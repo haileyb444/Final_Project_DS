@@ -38,10 +38,26 @@ library(ggplot2)
 
 # Data Description
 
+```{r}
+SleepStudy <- read.csv("https://raw.githubusercontent.com/haileyb444/datasets/master/SleepStudy.csv")
+```
+
+```{r}
+sample_n(SleepStudy, 10)
+```
+
 # Exploratory Data Analysis
 
+First to take an initial look at the basic data statistics...
+
+```{r}
+summary(SleepStudy)
+```
 ## Conclusion
 
+## Future Applications
+
+## Datasets Cited
 
 
 
