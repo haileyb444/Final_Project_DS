@@ -11,8 +11,7 @@ output: html_notebook
 
 **Nolan Nguyen**
 (Contact Information)[mailto:nnguyen3353@floridapoly.edu]
-
-This is where the final project report write-up goes. 
+ 
 
 # Introduction
 
