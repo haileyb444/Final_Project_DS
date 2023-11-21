@@ -18,10 +18,10 @@ output: html_notebook
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
 
 
-   - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (Drinking, stress, depression, anxiety, etc.) and is there a correlation between the number hrs slept and cognitive function scores on the skill test?
+   - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (drinking, stress, depression, anxiety, etc.) and is there a correlation between the number of hours slept and cognitive function scores on the skill test?
   
-
-Let's explore and answer this question.
+  
+Let's explore and answer these questions.
 
 Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
@@ -38,9 +38,14 @@ library(ggplot2)
 
 # Data Description
 
+First, import the dataset and set it as a variable.
+
 ```{r}
+# Read the dataset
 SleepStudy <- read.csv("https://raw.githubusercontent.com/haileyb444/datasets/master/SleepStudy.csv")
 ```
+
+Then, take a random sample of the dataset.
 
 ```{r}
 sample_n(SleepStudy, 10)
