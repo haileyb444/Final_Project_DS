@@ -1753,20 +1753,58 @@ Sleep Patterns on College Students</h1>
 
 
 <!-- rnb-text-begin -->
-<p>##Introduction</p>
+<div id="team-members" class="section level2">
+<h2>Team Members</h2>
+<p><strong>Hailey Bauer</strong> (Contact Information)[<a href="mailto:hbauer2783@floridapoly.edu" class="uri">mailto:hbauer2783@floridapoly.edu</a>]</p>
+<p><strong>Nolan Nguyen</strong> (Contact Information)[<a href="mailto:nnguyen3353@floridapoly.edu" class="uri">mailto:nnguyen3353@floridapoly.edu</a>]</p>
 <p>This is where the final project report write-up goes.</p>
-<p>Before you submit, make sure everything runs as expected.</p>
-<p>You can add sections as you see fit. Make sure you have a section
-called “Introduction” at the beginning and a section called “Conclusion”
-at the end. The rest is up to you!</p>
-<p><em>Make use of your knowledge of Markdown to appropriately typeset
-this report!</em></p>
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>College students often have lots of assignments to do, early classes,
+and many other activities that occupy their time. All of these factors
+influence their sleep and therefore their mental health, physical
+health, and academic performance. We strive to discover how these
+factors influence students through the following research question:</p>
+<ul>
+<li>What is the distribution of sleep quality among college students and
+are there any significant factors affecting sleep quality (Drinking,
+stress, depression, anxiety, etc.) and is there a correlation between
+the number hrs slept and cognitive function scores on the skill
+test?</li>
+</ul>
+<p>Let’s explore and answer this question.</p>
+<p>Our project investigates 254 students who were surveyed for this
+sleep study including characteristics such as the quantity of early
+classes taken, GPA, quantity and quality of sleep, depression score,
+anxiety score, stress score, etc. This is our project for Foundations of
+Data Analytics (Fall 2023) class.</p>
+</div>
+<div id="prerequisites" class="section level1">
+<h1>Prerequisites</h1>
+<p>Load the following R packages required for the data analysis…</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGRwbHlyKVxubGlicmFyeShnZ3Bsb3QyKVxuYGBgIn0= -->
+<pre class="r"><code>library(tidyverse)
+library(dplyr)
+library(ggplot2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-description" class="section level1">
+<h1>Data Description</h1>
+</div>
+<div id="exploratory-data-analysis" class="section level1">
+<h1>Exploratory Data Analysis</h1>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
 <!-- rnb-text-end -->
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmluZyBhbmQgQW5hbHl6aW5nIHRoZSBFZmZlY3RzIG9mIFNsZWVwIFBhdHRlcm5zIG9uIENvbGxlZ2UgU3R1ZGVudHMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCiAgIA0KLS0tDQoNCiMjSW50cm9kdWN0aW9uIA0KDQpUaGlzIGlzIHdoZXJlIHRoZSBmaW5hbCBwcm9qZWN0IHJlcG9ydCB3cml0ZS11cCBnb2VzLiANCg0KDQpCZWZvcmUgeW91IHN1Ym1pdCwgbWFrZSBzdXJlIGV2ZXJ5dGhpbmcgcnVucyBhcyBleHBlY3RlZC4NCg0KWW91IGNhbiBhZGQgc2VjdGlvbnMgYXMgeW91IHNlZSBmaXQuIE1ha2Ugc3VyZSB5b3UgaGF2ZSBhIHNlY3Rpb24gY2FsbGVkICJJbnRyb2R1Y3Rpb24iIGF0IHRoZSBiZWdpbm5pbmcgYW5kIGEgc2VjdGlvbiBjYWxsZWQgIkNvbmNsdXNpb24iIGF0IHRoZSBlbmQuIFRoZSByZXN0IGlzIHVwIHRvIHlvdSENCg0KX01ha2UgdXNlIG9mIHlvdXIga25vd2xlZGdlIG9mIE1hcmtkb3duIHRvIGFwcHJvcHJpYXRlbHkgdHlwZXNldCB0aGlzIHJlcG9ydCFfDQoNCg0KDQojIyBDb25jbHVzaW9uDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkV4cGxvcmluZyBhbmQgQW5hbHl6aW5nIHRoZSBFZmZlY3RzIG9mIFNsZWVwIFBhdHRlcm5zIG9uIENvbGxlZ2UgU3R1ZGVudHMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCiAgIA0KLS0tDQoNCiMjIFRlYW0gTWVtYmVycw0KDQoqKkhhaWxleSBCYXVlcioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOmhiYXVlcjI3ODNAZmxvcmlkYXBvbHkuZWR1XQ0KDQoqKk5vbGFuIE5ndXllbioqDQooQ29udGFjdCBJbmZvcm1hdGlvbilbbWFpbHRvOm5uZ3V5ZW4zMzUzQGZsb3JpZGFwb2x5LmVkdV0NCg0KVGhpcyBpcyB3aGVyZSB0aGUgZmluYWwgcHJvamVjdCByZXBvcnQgd3JpdGUtdXAgZ29lcy4gDQoNCiMgSW50cm9kdWN0aW9uDQoNCkNvbGxlZ2Ugc3R1ZGVudHMgb2Z0ZW4gaGF2ZSBsb3RzIG9mIGFzc2lnbm1lbnRzIHRvIGRvLCBlYXJseSBjbGFzc2VzLCBhbmQgbWFueSBvdGhlciBhY3Rpdml0aWVzIHRoYXQgb2NjdXB5IHRoZWlyIHRpbWUuIEFsbCBvZiB0aGVzZSBmYWN0b3JzIGluZmx1ZW5jZSB0aGVpciBzbGVlcCBhbmQgdGhlcmVmb3JlIHRoZWlyIG1lbnRhbCBoZWFsdGgsIHBoeXNpY2FsIGhlYWx0aCwgYW5kIGFjYWRlbWljIHBlcmZvcm1hbmNlLiBXZSBzdHJpdmUgdG8gZGlzY292ZXIgaG93IHRoZXNlIGZhY3RvcnMgaW5mbHVlbmNlIHN0dWRlbnRzIHRocm91Z2ggdGhlIGZvbGxvd2luZyByZXNlYXJjaCBxdWVzdGlvbjoNCg0KDQogICAtIFdoYXQgaXMgdGhlIGRpc3RyaWJ1dGlvbiBvZiBzbGVlcCBxdWFsaXR5IGFtb25nIGNvbGxlZ2Ugc3R1ZGVudHMgYW5kIGFyZSB0aGVyZSBhbnkgc2lnbmlmaWNhbnQgZmFjdG9ycyBhZmZlY3Rpbmcgc2xlZXAgcXVhbGl0eSAoRHJpbmtpbmcsIHN0cmVzcywgZGVwcmVzc2lvbiwgYW54aWV0eSwgZXRjLikgYW5kIGlzIHRoZXJlIGEgY29ycmVsYXRpb24gYmV0d2VlbiB0aGUgbnVtYmVyIGhycyBzbGVwdCBhbmQgY29nbml0aXZlIGZ1bmN0aW9uIHNjb3JlcyBvbiB0aGUgc2tpbGwgdGVzdD8NCiAgDQoNCkxldCdzIGV4cGxvcmUgYW5kIGFuc3dlciB0aGlzIHF1ZXN0aW9uLg0KDQpPdXIgcHJvamVjdCBpbnZlc3RpZ2F0ZXMgMjU0IHN0dWRlbnRzIHdobyB3ZXJlIHN1cnZleWVkIGZvciB0aGlzIHNsZWVwIHN0dWR5IGluY2x1ZGluZyBjaGFyYWN0ZXJpc3RpY3Mgc3VjaCBhcyB0aGUgcXVhbnRpdHkgb2YgZWFybHkgY2xhc3NlcyB0YWtlbiwgR1BBLCBxdWFudGl0eSBhbmQgcXVhbGl0eSBvZiBzbGVlcCwgZGVwcmVzc2lvbiBzY29yZSwgYW54aWV0eSBzY29yZSwgc3RyZXNzIHNjb3JlLCBldGMuIFRoaXMgaXMgb3VyIHByb2plY3QgZm9yIEZvdW5kYXRpb25zIG9mIERhdGEgQW5hbHl0aWNzIChGYWxsIDIwMjMpIGNsYXNzLg0KDQojIFByZXJlcXVpc2l0ZXMNCg0KTG9hZCB0aGUgZm9sbG93aW5nIFIgcGFja2FnZXMgcmVxdWlyZWQgZm9yIHRoZSBkYXRhIGFuYWx5c2lzLi4uDQoNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KYGBgDQoNCg0KIyBEYXRhIERlc2NyaXB0aW9uDQoNCiMgRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcw0KDQojIyBDb25jbHVzaW9uDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
 
 
 

@@ -4,18 +4,42 @@ output: html_notebook
    
 ---
 
-##Introduction 
+## Team Members
+
+**Hailey Bauer**
+(Contact Information)[mailto:hbauer2783@floridapoly.edu]
+
+**Nolan Nguyen**
+(Contact Information)[mailto:nnguyen3353@floridapoly.edu]
 
 This is where the final project report write-up goes. 
 
+# Introduction
 
-Before you submit, make sure everything runs as expected.
-
-You can add sections as you see fit. Make sure you have a section called "Introduction" at the beginning and a section called "Conclusion" at the end. The rest is up to you!
-
-_Make use of your knowledge of Markdown to appropriately typeset this report!_
+College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
 
 
+   - What is the distribution of sleep quality among college students and are there any significant factors affecting sleep quality (Drinking, stress, depression, anxiety, etc.) and is there a correlation between the number hrs slept and cognitive function scores on the skill test?
+  
+
+Let's explore and answer this question.
+
+Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
+
+# Prerequisites
+
+Load the following R packages required for the data analysis...
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Data Description
+
+# Exploratory Data Analysis
 
 ## Conclusion
 
