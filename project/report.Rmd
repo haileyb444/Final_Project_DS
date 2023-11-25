@@ -58,6 +58,34 @@ First to take an initial look at the basic data statistics...
 ```{r}
 summary(SleepStudy)
 ```
+
+```{r}
+# Replace the indicator values in various columns so as to create an easier to read dataset.
+SleepStudy["Gender"][SleepStudy["Gender"] == 0] <- "F"
+
+SleepStudy["Gender"][SleepStudy["Gender"] == 1] <- "M"
+
+SleepStudy["EarlyClass"][SleepStudy["EarlyClass"] == 0] <- "No"
+
+SleepStudy["EarlyClass"][SleepStudy["EarlyClass"] == 1] <- "Yes"
+
+SleepStudy["AllNighter"][SleepStudy["AllNighter"] == 0] <- "No"
+
+SleepStudy["AllNighter"][SleepStudy["AllNighter"] == 1] <- "Yes"
+
+
+# Change variables to be the same throughout
+SleepStudy[SleepStudy == "moderate"] <- "Moderate"
+
+SleepStudy[SleepStudy == "normal"] <- "Normal"
+
+SleepStudy[SleepStudy == "severe"] <- "Severe"
+
+SleepStudy[SleepStudy == "high"] <- "High"
+print(SleepStudy)
+```
+
+
 ## Conclusion
 
 ## Future Applications
