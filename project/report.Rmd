@@ -59,6 +59,7 @@ First to take an initial look at the basic data statistics...
 summary(SleepStudy)
 ```
 
+Next, make the data easier to read and organized...
 ```{r}
 # Replace the indicator values in various columns so as to create an easier to read dataset.
 SleepStudy["Gender"][SleepStudy["Gender"] == 0] <- "F"
