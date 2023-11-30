@@ -101,7 +101,30 @@ print(SleepStudy)
 ##### Anxiety
 
 ##### Stress
+
 ### Multivariate Exploration
+
+#### Sleep Quality by Significant Factors
+
+##### Sig Factor 1
+
+##### Sig Factor 2
+
+##### Sig Factor 3
+
+##### Sig Factor 4
+
+##### Sig Factor 5
+
+#### Quantity of Sleep by Cognitive Function Scores
+
+## Data Analysis
+
+### What is the distribution of sleep quality among college students?
+
+### Are there any significant factors affecting sleep quality?
+
+### Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
 
 ## Conclusion
 
