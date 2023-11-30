@@ -13,7 +13,7 @@ output: html_notebook
 (Contact Information)[mailto:nnguyen3353@floridapoly.edu]
  
 
-# Introduction
+## Introduction
 
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
 
@@ -25,7 +25,7 @@ Let's explore and answer these questions.
 
 Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
-# Prerequisites
+## Prerequisites
 
 Load the following R packages required for the data analysis...
 
@@ -36,7 +36,7 @@ library(ggplot2)
 ```
 
 
-# Data Description
+## Data Description
 
 First, import the dataset and set it as a variable.
 
@@ -51,7 +51,7 @@ Then, take a random sample of the dataset.
 sample_n(SleepStudy, 10)
 ```
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 
 First to take an initial look at the basic data statistics...
 
@@ -86,6 +86,22 @@ SleepStudy[SleepStudy == "high"] <- "High"
 print(SleepStudy)
 ```
 
+### Univariate Exploration
+
+#### Sleep Quality
+
+#### Demographics
+
+#### Alcohol
+
+#### Mental Factors
+
+##### Depression
+
+##### Anxiety
+
+##### Stress
+### Multivariate Exploration
 
 ## Conclusion
 
