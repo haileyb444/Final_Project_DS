@@ -138,6 +138,28 @@ SleepStudy %>%
 
 
 
+### Mental Factors {.tabset .tabset-fade .tabset-pills}
+
+#### Depression
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) 
+```
+
+
+#### Anxiety
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) 
+```
+
+
+#### Stress
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = StressScore, fill = Stress)) 
+```
+
 ### Alcohol
 ```{r}
 ggplot(data = SleepStudy) +
@@ -159,30 +181,6 @@ AlcoholUse_Refined
 ```{r}
 ggplot(data = AlcoholUse_Refined) +
   geom_histogram(aes(x = Drinks, fill = AlcoholUse_Refined)) 
-```
-
-
-
-### Mental Factors {.tabset .tabset-fade .tabset-pills}
-
-#### Depression
-```{r}
-ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) 
-```
-
-
-#### Anxiety
-```{r}
-ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) 
-```
-
-
-#### Stress
-```{r}
-ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = StressScore, fill = Stress)) 
 ```
 
 
