@@ -16,9 +16,12 @@ output:
 ## Team Members
 
 **Hailey Bauer**
+
 (Contact Information)[mailto:hbauer2783@floridapoly.edu]
 
+
 **Nolan Nguyen**
+
 (Contact Information)[mailto:nnguyen3353@floridapoly.edu]
  
 
@@ -92,7 +95,8 @@ SleepStudy[SleepStudy == "normal"] <- "Normal"
 SleepStudy[SleepStudy == "severe"] <- "Severe"
 
 SleepStudy[SleepStudy == "high"] <- "High"
-print(SleepStudy)
+
+sample_n(SleepStudy, 10)
 ```
 
 ## Univariate Exploration
@@ -116,11 +120,15 @@ SleepStudy %>%
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = Gender)) 
 ```
+
+
 #### ClassYear
 ```{r}
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = ClassYear)) 
 ```
+
+
 #### Sleep Habits
 ```{r}
 SleepStudy %>% 
