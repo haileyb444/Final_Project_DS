@@ -192,6 +192,16 @@ ggplot(data = AlcoholUse_Refined) +
 
 ##### Gender
 
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = Gender)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(Gender)) +
+  theme(legend.position = "none")
+
+```
+
 ##### Class Year
 
 ```{r}
@@ -200,18 +210,6 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = ClassYear)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(ClassYear)) +
-  theme(legend.position = "none")
-
-```
-
-##### Gender
-
-```{r}
-SleepStudy %>% 
-  ggplot() +
-  geom_boxplot(aes(y = PoorSleepQuality, color = Gender)) +
-  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
-  facet_wrap(vars(Gender)) +
   theme(legend.position = "none")
 
 ```
