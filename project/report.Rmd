@@ -138,7 +138,7 @@ SleepStudy %>%
 
 
 
-### Mental Factors {.tabset .tabset-fade .tabset-pills}
+### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
 #### Depression
 ```{r}
@@ -188,15 +188,35 @@ ggplot(data = AlcoholUse_Refined) +
 
 ### Sleep Quality by Significant Factors
 
-#### Demographics
+#### Demographics {.tabset .tabset-fade .tabset-pills}
 
-#### Alcohol Use
+##### Gender
 
-#### Sig Factor 3
+##### Class Year
 
-#### Sig Factor 4
+##### Gender
 
-#### Sig Factor 5
+##### Sleep Habits
+
+#### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
+
+##### Depression
+
+##### Anxiety
+
+##### Stress
+
+#### Alcohol
+
+#### Academic Factors {.tabset .tabset-fade .tabset-pills}
+
+##### GPA
+
+##### Classes Missed
+
+##### Number of Early Classes
+
+##### Allnighters
 
 ### Quantity of Sleep by Cognitive Function Scores
 
