@@ -90,17 +90,62 @@ print(SleepStudy)
 
 #### Sleep Quality
 
-#### Demographics
+### Demographics
 
-#### Alcohol
+#### Gender
 
-#### Mental Factors
+```{r}
+ggplot(data = SleepStudy) +
+  geom_bar(aes(x = Gender)) 
+```
+#### ClassYear
+```{r}
+ggplot(data = SleepStudy) +
+  geom_bar(aes(x = ClassYear)) 
+```
 
-##### Depression
 
-##### Anxiety
+### Alcohol
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = Drinks, fill = AlcoholUse)) 
+```
+```{r}
+AlcoholUse_Refined <- SleepStudy %>% 
+  mutate(AlcoholUse_Refined = ifelse(Drinks == 0, "Abstain", 
+                                     ifelse(Drinks <= 5, "Light", 
+                                            ifelse(Drinks <= 9, "Moderate", "Heavy"))))
+```
 
-##### Stress
+```{r}
+ggplot(data = AlcoholUse_Refined) +
+  geom_histogram(aes(x = Drinks, fill = AlcoholUse_Refined)) 
+```
+
+
+
+### Mental Factors
+
+#### Depression
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) 
+```
+
+
+#### Anxiety
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) 
+```
+
+
+#### Stress
+```{r}
+ggplot(data = SleepStudy) +
+  geom_histogram(aes(x = StressScore, fill = Stress)) 
+```
+
 
 ### Multivariate Exploration
 
