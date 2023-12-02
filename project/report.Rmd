@@ -202,19 +202,19 @@ ggplot(data = SleepStudy) +
 
 #### Quantity of Sleep by Cognitive Function Scores
 
-## Data Analysis
+# Data Analysis
 
-### What is the distribution of sleep quality among college students?
+## What is the distribution of sleep quality among college students?
 
-### Are there any significant factors affecting sleep quality?
+## Are there any significant factors affecting sleep quality?
 
-### Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
+## Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
 
-## Conclusion
+# Conclusion
 
-## Future Applications
+# Future Applications
 
-## Datasets Cited
+# Datasets Cited
 
 
 
