@@ -17,12 +17,12 @@ output:
 
 **Hailey Bauer**
 
-(Contact Information)[mailto:hbauer2783@floridapoly.edu]
+[Contact Information](mailto:hbauer2783@floridapoly.edu)
 
-
+<br>
 **Nolan Nguyen**
 
-(Contact Information)[mailto:nnguyen3353@floridapoly.edu]
+[Contact Information](mailto:nnguyen3353@floridapoly.edu)
  
 
 # Introduction
@@ -186,21 +186,21 @@ ggplot(data = SleepStudy) +
 ```
 
 
-### Multivariate Exploration
+## Multivariate Exploration
 
-#### Sleep Quality by Significant Factors
+### Sleep Quality by Significant Factors
 
-##### Demographics
+#### Demographics
 
-##### Alcohol Use
+#### Alcohol Use
 
-##### Sig Factor 3
+#### Sig Factor 3
 
-##### Sig Factor 4
+#### Sig Factor 4
 
-##### Sig Factor 5
+#### Sig Factor 5
 
-#### Quantity of Sleep by Cognitive Function Scores
+### Quantity of Sleep by Cognitive Function Scores
 
 # Data Analysis
 
