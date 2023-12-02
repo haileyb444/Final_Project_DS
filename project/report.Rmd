@@ -194,19 +194,90 @@ ggplot(data = AlcoholUse_Refined) +
 
 ##### Class Year
 
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = ClassYear)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(ClassYear)) +
+  theme(legend.position = "none")
+
+```
+
 ##### Gender
 
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = Gender)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(Gender)) +
+  theme(legend.position = "none")
+
+```
+
 ##### Sleep Habits
+
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = LarkOwl)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(LarkOwl)) +
+  theme(legend.position = "none")
+
+```
 
 #### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
 ##### Depression
 
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = DepressionStatus)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(DepressionStatus)) +
+  theme(legend.position = "none")
+
+```
+
 ##### Anxiety
+
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = AnxietyStatus)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(AnxietyStatus)) +
+  theme(legend.position = "none")
+
+```
 
 ##### Stress
 
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = Stress)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(Stress)) +
+  theme(legend.position = "none")
+
+```
+
 #### Alcohol
+
+```{r}
+AlcoholUse_Refined %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = AlcoholUse_Refined)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(AlcoholUse_Refined)) +
+  theme(legend.position = "none") +
+  labs(x = "GPA", y = "Sleep Quality", title = "Sleep Quality by GPA Aggregated by Alcohol Use")
+
+```
 
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
 
@@ -214,9 +285,29 @@ ggplot(data = AlcoholUse_Refined) +
 
 ##### Classes Missed
 
-##### Number of Early Classes
+##### Early Classes
+
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = EarlyClass)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(EarlyClass)) +
+  theme(legend.position = "none")
+
+```
 
 ##### Allnighters
+
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_boxplot(aes(y = PoorSleepQuality, color = AllNighter)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+  facet_wrap(vars(AllNighter)) +
+  theme(legend.position = "none")
+
+```
 
 ### Quantity of Sleep by Cognitive Function Scores
 
