@@ -1,7 +1,16 @@
 ---
 title: "Exploring and Analyzing the Effects of Sleep Patterns on College Students"
-output: html_notebook
-   
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_depth: '2'
+    df_print: paged
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
 ---
 
 ## Team Members
@@ -13,7 +22,7 @@ output: html_notebook
 (Contact Information)[mailto:nnguyen3353@floridapoly.edu]
  
 
-## Introduction
+# Introduction
 
 College students often have lots of assignments to do, early classes, and many other activities that occupy their time. All of these factors influence their sleep and therefore their mental health, physical health, and academic performance. We strive to discover how these factors influence students through the following research question:
 
@@ -25,7 +34,7 @@ Let's explore and answer these questions.
 
 Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
-## Prerequisites
+# Prerequisites
 
 Load the following R packages required for the data analysis...
 
@@ -36,7 +45,7 @@ library(ggplot2)
 ```
 
 
-## Data Description
+# Data Description
 
 First, import the dataset and set it as a variable.
 
@@ -51,7 +60,7 @@ Then, take a random sample of the dataset.
 sample_n(SleepStudy, 10)
 ```
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 
 First to take an initial look at the basic data statistics...
 
@@ -86,11 +95,20 @@ SleepStudy[SleepStudy == "high"] <- "High"
 print(SleepStudy)
 ```
 
-### Univariate Exploration
+## Univariate Exploration
 
-#### Sleep Quality
 
-### Demographics
+
+### Sleep Quality
+
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_histogram(aes(x = PoorSleepQuality))
+```
+
+
+### Demographics{.tabset .tabset-fade .tabset-pills}
 
 #### Gender
 
@@ -103,6 +121,13 @@ ggplot(data = SleepStudy) +
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = ClassYear)) 
 ```
+#### Sleep Habits
+```{r}
+SleepStudy %>% 
+  ggplot() +
+  geom_bar(aes(x = LarkOwl))
+```
+
 
 
 ### Alcohol
@@ -110,11 +135,17 @@ ggplot(data = SleepStudy) +
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = Drinks, fill = AlcoholUse)) 
 ```
+Note that the students in the sleep survey self-reported their level of alcohol use (`AlcoholUse`). This causes variations to occur as each individual's understanding and criteria for the labels differ. For example, one student reported their alcohol use as "light" while stating that they drank an average of 24 alcoholic beverages per week while another student reported their alcohol use as "heavy" while drinking an average of 5 alcoholic beverages per week.
+
+We have standardized these labels as it relates to the dataset so as to provide a more accurate result for the distribution of alcoholic beverages consumed on a weekly basis by college students and their drinking significance labels.
+
 ```{r}
+# Create a new dataset with the refined drinking significance labels
 AlcoholUse_Refined <- SleepStudy %>% 
   mutate(AlcoholUse_Refined = ifelse(Drinks == 0, "Abstain", 
                                      ifelse(Drinks <= 5, "Light", 
                                             ifelse(Drinks <= 9, "Moderate", "Heavy"))))
+AlcoholUse_Refined
 ```
 
 ```{r}
@@ -124,7 +155,7 @@ ggplot(data = AlcoholUse_Refined) +
 
 
 
-### Mental Factors
+### Mental Factors {.tabset .tabset-fade .tabset-pills}
 
 #### Depression
 ```{r}
@@ -151,9 +182,9 @@ ggplot(data = SleepStudy) +
 
 #### Sleep Quality by Significant Factors
 
-##### Sig Factor 1
+##### Demographics
 
-##### Sig Factor 2
+##### Alcohol Use
 
 ##### Sig Factor 3
 
