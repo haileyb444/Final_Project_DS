@@ -309,7 +309,21 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 
 ##### GPA
 
+```{r}
+ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
+```
+
 ##### Classes Missed
+
+```{r}
+ggplot(AlcoholUse_Refined, aes(x = ClassesMissed, y = PoorSleepQuality)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
+```
 
 ##### Early Classes
 
