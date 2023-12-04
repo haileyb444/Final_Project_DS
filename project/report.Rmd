@@ -240,6 +240,13 @@ SleepStudy %>%
 
 ```
 
+```{r}
+ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = DepressionStatus)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
+```
+
 ##### Anxiety
 
 ```{r}
@@ -250,6 +257,13 @@ SleepStudy %>%
   facet_wrap(vars(AnxietyStatus)) +
   theme(legend.position = "none")
 
+```
+
+```{r}
+ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietyStatus)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
 ```
 
 ##### Stress
@@ -264,6 +278,13 @@ SleepStudy %>%
 
 ```
 
+```{r}
+ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
+```
+
 #### Alcohol
 
 ```{r}
@@ -275,6 +296,13 @@ AlcoholUse_Refined %>%
   theme(legend.position = "none") +
   labs(x = "GPA", y = "Sleep Quality", title = "Sleep Quality by GPA Aggregated by Alcohol Use")
 
+```
+
+```{r}
+ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = AlcoholUse_Refined)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
 ```
 
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
@@ -308,6 +336,24 @@ SleepStudy %>%
 ```
 
 ### Quantity of Sleep by Cognitive Function Scores
+
+```{r}
+SleepStudy %>% 
+  ggplot(aes(x = CognitionZscore, y = AverageSleep)) +
+  geom_boxplot()
+```
+
+```{r}
+cor.test(SleepStudy$AverageSleep, SleepStudy$CognitionZscore)
+```
+
+```{r}
+ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth() +
+  theme_bw() 
+```
+
 
 # Data Analysis
 
