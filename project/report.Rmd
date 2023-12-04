@@ -111,6 +111,10 @@ SleepStudy[SleepStudy == "severe"] <- "Severe"
 
 SleepStudy[SleepStudy == "high"] <- "High"
 
+
+SleepStudy$ClassYear <- as.character(SleepStudy$ClassYear)
+
+
 sample_n(SleepStudy, 10)
 ```
 
@@ -138,20 +142,23 @@ SleepStudy %>%
 
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_bar(aes(x = Gender)) +
+  geom_bar(aes(x = Gender, fill = Gender)) +
   theme_minimal() +
+  theme(legend.position = "none") +
   labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Distribution of Gender Among College Students")
+       title = "Distribution of Gender Among College Students") 
+  
 ```
 
 
 #### ClassYear
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_bar(aes(x = ClassYear)) +
+  geom_bar(aes(x = ClassYear, fill = ClassYear)) +
   theme_minimal() +
+  theme(legend.position = "none") +
   labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
@@ -163,8 +170,9 @@ ggplot(data = SleepStudy) +
 ```{r}
 SleepStudy %>% 
   ggplot() +
-  geom_bar(aes(x = LarkOwl)) +
+  geom_bar(aes(x = LarkOwl, fill = LarkOwl)) +
   theme_minimal() +
+  theme(legend.position = "none") +
   labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
