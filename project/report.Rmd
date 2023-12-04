@@ -455,7 +455,7 @@ SleepStudy %>%
   labs(x = "Cognition Z Score",
        y = "Average Sleep",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Cognitive Z Score Aggregated by Average Sleep Among College Students")
+       title = "Cognition Z Score Aggregated by Average Sleep Among College Students")
 ```
 
 ```{r}
