@@ -29,6 +29,8 @@ knitr::opts_chunk$set(warning = FALSE)
 
 [Contact Information](mailto:nnguyen3353@floridapoly.edu)
  
+ 
+ 
 
 # Introduction
 
@@ -42,6 +44,9 @@ Let's explore and answer these questions.
 
 Our project investigates 254 students who were surveyed for this sleep study including characteristics such as the quantity of early classes taken, GPA, quantity and quality of sleep, depression score, anxiety score, stress score, etc. This is our project for Foundations of Data Analytics (Fall 2023) class.
 
+
+
+
 # Prerequisites
 
 Load the following R packages required for the data analysis...
@@ -51,6 +56,8 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 ```
+
+
 
 
 # Data Description
@@ -67,6 +74,9 @@ Then, take a random sample of the dataset.
 ```{r}
 sample_n(SleepStudy, 10)
 ```
+
+
+
 
 # Exploratory Data Analysis
 
@@ -107,7 +117,6 @@ sample_n(SleepStudy, 10)
 ## Univariate Exploration
 
 
-
 ### Sleep Quality
 
 ```{r}
@@ -115,7 +124,7 @@ SleepStudy %>%
   ggplot() +
   geom_histogram(aes(x = PoorSleepQuality)) +
   theme_minimal() +
-  labs(x = "Sleep Quality", 
+  labs(x = "", 
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Sleep Quality Among College Students")
@@ -124,13 +133,14 @@ SleepStudy %>%
 
 ### Demographics{.tabset .tabset-fade .tabset-pills}
 
+
 #### Gender
 
 ```{r}
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = Gender)) +
   theme_minimal() +
-  labs(x = "Gender",
+  labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Gender Among College Students")
@@ -142,7 +152,7 @@ ggplot(data = SleepStudy) +
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = ClassYear)) +
   theme_minimal() +
-  labs(x = "Class Year",
+  labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Class Year Among College Students")
@@ -155,22 +165,23 @@ SleepStudy %>%
   ggplot() +
   geom_bar(aes(x = LarkOwl)) +
   theme_minimal() +
-  labs(x = "Sleep Habit",
+  labs(x = "",
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Sleep Habits Among College Students")
 ```
 
 
-
 ### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
+
 #### Depression
+
 ```{r}
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) +
   theme_minimal() +
-  labs(x = "Depression Score",
+  labs(x = "",
        y = "Frequency",
        fill = "Depression Status",
        caption = "Data Source: SleepStudy dataframe",
@@ -184,7 +195,7 @@ ggplot(data = SleepStudy) +
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) +
   theme_minimal() +
-  labs(x = "Anxiety Score",
+  labs(x = "",
        y = "Frequency",
        fill = "Anxiety Status",
        caption = "Data Source: SleepStudy dataframe",
@@ -193,29 +204,33 @@ ggplot(data = SleepStudy) +
 
 
 #### Stress
+
 ```{r}
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = StressScore, fill = Stress)) +
   theme_minimal() +
-  labs(x = "Stress Score",
+  labs(x = "",
        y = "Frequency",
        fill = "Stress Level",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Stress Among College Students") 
 ```
 
+
 ### Alcohol
 ```{r}
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = Drinks, fill = AlcoholUse)) +
   theme_minimal() +
-  labs(x = "Alcoholic Beverages (per week)",
+  labs(x = "Alcoholic Beverages Consumed (per week)",
        y = "Frequency",
        fill = "Alcohol Consumption Level",
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Alcohol Consumption Among College Students") 
 ```
+
 Note that the students in the sleep survey self-reported their level of alcohol use (`AlcoholUse`). This causes variations to occur as each individual's understanding and criteria for the labels differ. For example, one student reported their alcohol use as "light" while stating that they drank an average of 24 alcoholic beverages per week while another student reported their alcohol use as "heavy" while drinking an average of 5 alcoholic beverages per week.
+
 
 We have standardized these labels as it relates to the dataset so as to provide a more accurate result for the distribution of alcoholic beverages consumed on a weekly basis by college students and their drinking significance labels.
 
@@ -232,7 +247,7 @@ AlcoholUse_Refined
 ggplot(data = AlcoholUse_Refined) +
   geom_histogram(aes(x = Drinks, fill = AlcoholUse_Refined)) +
   theme_minimal() +
-  labs(x = "Alcoholic Beverages (per week)",
+  labs(x = "Alcoholic Beverages Consumed (per week)",
        y = "Frequency",
        fill = "Alcohol Consumption Level",
        caption = "Data Source: SleepStudy dataframe",
@@ -242,9 +257,12 @@ ggplot(data = AlcoholUse_Refined) +
 
 ## Multivariate Exploration
 
+
 ### Sleep Quality by Significant Factors
 
+
 #### Demographics {.tabset .tabset-fade .tabset-pills}
+
 
 ##### Gender
 
@@ -262,6 +280,7 @@ SleepStudy %>%
        title = "Sleep Quality Aggregated by Gender Among College Students")
 ```
 
+
 ##### Class Year
 
 ```{r}
@@ -276,8 +295,8 @@ SleepStudy %>%
        y = "Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
        title = "Sleep Quality Aggregated by Class Year Among College Students")
-
 ```
+
 
 ##### Sleep Habits
 
@@ -293,10 +312,11 @@ SleepStudy %>%
        y = "Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
        title = "Sleep Quality Aggregated by Sleep Habits Among College Students")
-
 ```
 
+
 #### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
+
 
 ##### Depression
 
@@ -312,15 +332,20 @@ SleepStudy %>%
        y = "Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
        title = "Sleep Quality Aggregated by Depression Status Among College Students")
-
 ```
 
 ```{r}
 ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = DepressionStatus)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Depression Score",
+       y = "Sleep Quality",
+       color ="Depression Status",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Depression Relavent to Sleep Quality")
 ```
+
 
 ##### Anxiety
 
@@ -343,8 +368,14 @@ SleepStudy %>%
 ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietyStatus)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Anxiety Score",
+       y = "Sleep Quality",
+       color ="Anxiety Status",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Anxiety Relavent to Sleep Quality")
 ```
+
 
 ##### Stress
 
@@ -360,15 +391,20 @@ SleepStudy %>%
        y = "Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
        title = "Sleep Quality Aggregated by Stress Level Among College Students")
-
 ```
 
 ```{r}
 ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Stress Score",
+       y = "Sleep Quality",
+       color ="Stress Level",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Stess Relavent to Sleep Quality")
 ```
+
 
 #### Alcohol
 
@@ -390,10 +426,17 @@ AlcoholUse_Refined %>%
 ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = AlcoholUse_Refined)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Alcoholic Beverages Consumed (per week)",
+       y = "Sleep Quality",
+       color ="Alcohol Consumption Level",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Alcohol Consumption Relavent to Sleep Quality")
 ```
 
+
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
+
 
 ##### GPA
 
@@ -401,8 +444,13 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "GPA",
+       y = "Sleep Quality",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "GPA Relavent to Sleep Quality")
 ```
+
 
 ##### Classes Missed
 
@@ -410,8 +458,13 @@ ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
 ggplot(AlcoholUse_Refined, aes(x = ClassesMissed, y = PoorSleepQuality)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Classes Missed",
+       y = "Sleep Quality",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Quantity of Classes Missed Relavent to Sleep Quality")
 ```
+
 
 ##### Early Classes
 
@@ -429,6 +482,7 @@ SleepStudy %>%
        title = "Sleep Quality Aggregated by Early Classes Among College Students")
 ```
 
+
 ##### Allnighters
 
 ```{r}
@@ -444,6 +498,7 @@ SleepStudy %>%
        caption = "Data Source: SleepStudy dataframe",
        title = "Sleep Quality Aggregated by All Nighters Among College Students")
 ```
+
 
 ### Quantity of Sleep by Cognitive Function Scores
 
@@ -466,50 +521,32 @@ cor.test(SleepStudy$AverageSleep, SleepStudy$CognitionZscore)
 ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_minimal() 
+  theme_minimal() +
+  labs(x = "Cognition Z Score",
+       y = "Average Sleep",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Cognition Z Score Relavent to Quantity of Average Sleep")
 ```
 
 
 # Data Analysis
 
+
 ## What is the distribution of sleep quality among college students?
+
 
 ## Are there any significant factors affecting sleep quality?
 
+
 ## Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
+
 
 # Conclusion
 
+
 # Future Applications
 
+
 # Datasets Cited
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
