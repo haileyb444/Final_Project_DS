@@ -13,6 +13,11 @@ output:
     toc_float: yes
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+
 ## Team Members
 
 **Hailey Bauer**
@@ -108,7 +113,12 @@ sample_n(SleepStudy, 10)
 ```{r}
 SleepStudy %>% 
   ggplot() +
-  geom_histogram(aes(x = PoorSleepQuality))
+  geom_histogram(aes(x = PoorSleepQuality)) +
+  theme_minimal() +
+  labs(x = "Sleep Quality", 
+       y = "Frequency",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Distribution of Sleep Quality Among College Students")
 ```
 
 
@@ -118,14 +128,24 @@ SleepStudy %>%
 
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_bar(aes(x = Gender)) 
+  geom_bar(aes(x = Gender)) +
+  theme_minimal() +
+  labs(x = "Gender",
+       y = "Frequency",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Distribution of Gender Among College Students")
 ```
 
 
 #### ClassYear
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_bar(aes(x = ClassYear)) 
+  geom_bar(aes(x = ClassYear)) +
+  theme_minimal() +
+  labs(x = "Class Year",
+       y = "Frequency",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Distribution of Class Year Among College Students")
 ```
 
 
@@ -133,7 +153,12 @@ ggplot(data = SleepStudy) +
 ```{r}
 SleepStudy %>% 
   ggplot() +
-  geom_bar(aes(x = LarkOwl))
+  geom_bar(aes(x = LarkOwl)) +
+  theme_minimal() +
+  labs(x = "Sleep Habit",
+       y = "Frequency",
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Distribution of Sleep Habits Among College Students")
 ```
 
 
@@ -143,27 +168,31 @@ SleepStudy %>%
 #### Depression
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) 
+  geom_histogram(aes(x = DepressionScore, fill = DepressionStatus)) +
+  theme_minimal()
 ```
 
 
 #### Anxiety
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) 
+  geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) +
+  theme_minimal()
 ```
 
 
 #### Stress
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = StressScore, fill = Stress)) 
+  geom_histogram(aes(x = StressScore, fill = Stress)) +
+  theme_minimal()
 ```
 
 ### Alcohol
 ```{r}
 ggplot(data = SleepStudy) +
-  geom_histogram(aes(x = Drinks, fill = AlcoholUse)) 
+  geom_histogram(aes(x = Drinks, fill = AlcoholUse)) +
+  theme_minimal()
 ```
 Note that the students in the sleep survey self-reported their level of alcohol use (`AlcoholUse`). This causes variations to occur as each individual's understanding and criteria for the labels differ. For example, one student reported their alcohol use as "light" while stating that they drank an average of 24 alcoholic beverages per week while another student reported their alcohol use as "heavy" while drinking an average of 5 alcoholic beverages per week.
 
@@ -180,7 +209,8 @@ AlcoholUse_Refined
 
 ```{r}
 ggplot(data = AlcoholUse_Refined) +
-  geom_histogram(aes(x = Drinks, fill = AlcoholUse_Refined)) 
+  geom_histogram(aes(x = Drinks, fill = AlcoholUse_Refined)) +
+  theme_minimal()
 ```
 
 
@@ -198,6 +228,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = Gender)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(Gender)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -210,6 +241,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = ClassYear)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(ClassYear)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -222,6 +254,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = LarkOwl)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(LarkOwl)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -236,6 +269,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = DepressionStatus)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(DepressionStatus)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -244,7 +278,7 @@ SleepStudy %>%
 ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = DepressionStatus)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 ##### Anxiety
@@ -255,6 +289,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = AnxietyStatus)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(AnxietyStatus)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -263,7 +298,7 @@ SleepStudy %>%
 ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietyStatus)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 ##### Stress
@@ -274,6 +309,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = Stress)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(Stress)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -282,7 +318,7 @@ SleepStudy %>%
 ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 #### Alcohol
@@ -293,6 +329,7 @@ AlcoholUse_Refined %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = AlcoholUse_Refined)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(AlcoholUse_Refined)) +
+  theme_bw() +
   theme(legend.position = "none") +
   labs(x = "GPA", y = "Sleep Quality", title = "Sleep Quality by GPA Aggregated by Alcohol Use")
 
@@ -302,7 +339,7 @@ AlcoholUse_Refined %>%
 ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = AlcoholUse_Refined)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
@@ -313,7 +350,7 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 ##### Classes Missed
@@ -322,7 +359,7 @@ ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
 ggplot(AlcoholUse_Refined, aes(x = ClassesMissed, y = PoorSleepQuality)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 ##### Early Classes
@@ -333,6 +370,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = EarlyClass)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(EarlyClass)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -345,6 +383,7 @@ SleepStudy %>%
   geom_boxplot(aes(y = PoorSleepQuality, color = AllNighter)) +
   scale_y_continuous(breaks = seq(0, 20, by = 2)) +
   facet_wrap(vars(AllNighter)) +
+  theme_bw() +
   theme(legend.position = "none")
 
 ```
@@ -354,7 +393,8 @@ SleepStudy %>%
 ```{r}
 SleepStudy %>% 
   ggplot(aes(x = CognitionZscore, y = AverageSleep)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme_bw()
 ```
 
 ```{r}
@@ -365,7 +405,7 @@ cor.test(SleepStudy$AverageSleep, SleepStudy$CognitionZscore)
 ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
-  theme_bw() 
+  theme_minimal() 
 ```
 
 
