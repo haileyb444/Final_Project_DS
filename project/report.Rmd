@@ -121,6 +121,8 @@ sample_n(SleepStudy, 10)
 
 ## Univariate Exploration
 
+**EDIT**
+Embarking on the univariate exploration of the SleepStudy dataframe marks the commencement of a nuanced journey into the intricate realm of sleep patterns among the surveyed individuals. As we initiate this phase of analysis, our focus turns to individual variables, with the goal of comprehensively understanding their distributions, trends, and inherent characteristics. In this exploration, each variable becomes a narrative thread, and the spotlight now shines on unraveling the singular story encapsulated within the data. The initial stages of univariate exploration promise to unveil essential insights into the fundamental aspects of sleep study, setting the stage for a more profound understanding of the intricate dynamics that shape sleep-related behaviors within our dataset.
 
 ### Sleep Quality
 
@@ -269,6 +271,8 @@ ggplot(data = AlcoholUse_Refined) +
 
 ## Multivariate Exploration
 
+**EDIT**
+Venturing into the realm of multivariate exploration within the SleepStudy dataframe marks a pivotal juncture in our investigative journey. Unlike the solitary focus of univariate analysis, this phase invites us to navigate the intricate interplay among various variables, unlocking a mosaic of insights into the nuanced landscape of sleep patterns. As we delve into the complexities of these interconnected factors, our goal is to unearth hidden patterns, correlations, and dependencies that collectively shape the diverse tapestry of sleep-related behaviors. This multifaceted exploration transcends the confines of individual variables, providing a holistic panorama that enriches our comprehension of the intricate dynamics governing the sleep experiences of the surveyed individuals. Each variable, in this context, contributes a unique hue to the comprehensive canvas of understanding, revealing a story that extends beyond isolated metrics and into the intricacies of sleep study.
 
 ### Sleep Quality by Significant Factors
 
