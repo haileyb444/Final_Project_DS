@@ -112,10 +112,10 @@ SleepStudy[SleepStudy == "severe"] <- "Severe"
 
 SleepStudy[SleepStudy == "high"] <- "High"
 
-
+# Set the Class Year column as a character value
 SleepStudy$ClassYear <- as.character(SleepStudy$ClassYear)
 
-
+# Print a sample of the improved dataframe
 sample_n(SleepStudy, 10)
 ```
 
@@ -123,6 +123,9 @@ sample_n(SleepStudy, 10)
 
 
 ### Sleep Quality
+
+**EDIT**
+In the realm of sleep study research, the variable "PoorSleepQuality" within the SleepStudy dataframe serves as a crucial metric, encapsulating the diverse experiences of surveyed college students. Representing a quantitative measure of sleep quality, this variable unveils a spectrum of data points where higher values correspond to poorer sleep quality. As we delve into the intricate details of this dataset, we gain valuable insights into the sleep patterns of college students, shedding light on the factors influencing their sleep quality and laying the foundation for a comprehensive analysis of the relationship between various variables and the overall well-being of these individuals.
 
 ```{r}
 SleepStudy %>% 
