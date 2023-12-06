@@ -9,7 +9,7 @@ The data fields included are: Gender, ClassYear, LarkOwl (Early riser or night o
 
 Below we include some basic statistics for this datasets, including dimensions and a summary of the data...
 
-The title of this dataset is "SleepStudy" and is comprised of 27 variables (columns) and 253 observations (rows) with each value in its own cell. Therefore, this is a tidy dataset. 
+The title of this dataset is "SleepStudy" and is comprised of 27 variables (columns) and 254 observations (rows) with each value in its own cell. Therefore, this is a tidy dataset. 
 
 
 
