@@ -86,7 +86,7 @@ First to take an initial look at the basic data statistics...
 ```{r}
 summary(SleepStudy)
 ```
-
+<br>
 Through our preliminary observations of the `SleepStudy` dataset we noticed that several variables were hard to understand at first glance, were not all formatted in the same manner, and one variable should be classified as a character value instead of an integer for data analysis purposes. We used the following code to conduct this data cleaning process, ultimately improving the readability of the dataset.
 
 ```{r}
@@ -120,6 +120,7 @@ SleepStudy$ClassYear <- as.character(SleepStudy$ClassYear)
 sample_n(SleepStudy, 10)
 ```
 
+<br>
 
 ## Univariate Exploration
 
@@ -148,6 +149,7 @@ SleepStudy %>%
 
 The next step involves scrutinizing pertinent demographic variables, including gender, class year, and sleep habits, to understand their distribution within the surveyed college student population. This analysis aims to uncover patterns and relationships among these key factors.
 
+<br> 
 
 #### Gender
 Now, we turn our attention specifically to the variable `Gender` within the surveyed college student population. This entails a detailed exploration of the distribution of gender categories to gain a comprehensive understanding of the demographic landscape. Analyzing gender patterns contributes valuable insights into potential disparities or trends within the dataset.
@@ -207,6 +209,8 @@ SleepStudy %>%
 ### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
 Shifting the focus specifically to the distribution of mental health factors, the analysis will delve into the prevalence and patterns of variables related to stress, depression, and anxiety among surveyed college students. 
+
+<br> 
 
 #### Depression
 
@@ -280,7 +284,7 @@ ggplot(data = SleepStudy) +
        title = "Distribution of Alcohol Consumption Among College Students") 
 ```
 
-
+<br>
 We have standardized these labels as it relates to the dataset so as to provide a more accurate result for the distribution of alcoholic beverages consumed on a weekly basis by college students and their drinking significance labels.
 
 ```{r}
@@ -291,6 +295,8 @@ AlcoholUse_Refined <- SleepStudy %>%
                                             ifelse(Drinks <= 9, "Moderate", "Heavy"))))
 AlcoholUse_Refined
 ```
+
+<br>
 Below illustrates the alcohol distribution among the surveyed college students using the standardized `AlcoholUse_Refined` variable so as to provide more a accurate analysis and depiction of the dataset.
 
 ```{r}
@@ -308,6 +314,7 @@ ggplot(data = AlcoholUse_Refined) +
 ## Multivariate Exploration
 
 Commencing the multivariate exploration within the `SleepStudy` dataframe denotes a significant phase in our analyses. Unlike the solitary focus of univariate analysis, this phase allows us to navigate the intricate relationships between numerous variables. As we delve into the complexities of these interconnected factors, our goal is to unearth hidden patterns and correlations that collectively influence sleep-related behaviors within the surveyed population.
+
 
 ### Sleep Quality by Significant Factors
 
