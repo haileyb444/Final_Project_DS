@@ -318,15 +318,17 @@ Commencing the multivariate exploration within the `SleepStudy` dataframe denote
 
 ### Sleep Quality by Significant Factors
 
-**add**
+Shifting our focus to sleep quality by significant factors. Looking at gender distribution as well as class year demographics we get a glimpse on the landscape of college students’ sleep experiences. With a further exploration into mental health factors, it reveals an intricate relationship between depression, anxiety, and stress, and sleep quality. Our analysis extends to alcohol consumption, academic performance metrics like GPA and class attendance, and even diving into all-nighters, unraveling their impact on sleep quality. Additionally, the investigation explores the correlation between the quantity of sleep and cognitive function scores, providing insights into the complex relationship between sleep duration and academic performance. This understanding serves as a foundation for informed strategies aimed at developing improved well-being and academic success among college students.
+
 
 #### Demographics {.tabset .tabset-fade .tabset-pills}
 
-**add**
+As for our demographic analysis in our exploration of college students’ sleep quality we investigate gender, class year, and sleep habits as shown below to unveil any intriguing patterns. 
+
 
 ##### Gender
 
-The distribution of `PoorSleepQuality` is explored in relation to `gender`Gender` among college students. Our analysis reveals that there is no significant difference in sleep quality between male and female students. The boxplot illustrates that the median `PoorSleepQuality` scores are comparable, indicating that gender alone may not be a strong predictor of sleep disturbances.
+The distribution of `PoorSleepQuality` is explored in relation to `Gender` among college students. Our analysis reveals that there is no significant difference in sleep quality between male and female students. The boxplot illustrates that the median `PoorSleepQuality` scores are comparable, indicating that gender alone may not be a strong predictor of sleep disturbances.
 
 
 ```{r}
@@ -386,7 +388,7 @@ SleepStudy %>%
 
 #### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
-**add**
+In our investigation of college students' sleep quality, a key focus is on mental health factors, specifically stress, anxiety, and depression. This analysis aims to uncover potential correlations and patterns between mental health indicators and sleep disturbances. As we delve into these factors, our goal is to understand the interplay between mental well-being and sleep quality, offering valuable insights into the complex relationships that contribute to the overall health of college students.
 
 ##### Depression
 
@@ -409,8 +411,6 @@ SleepStudy %>%
 
 A scatter plot and regression line further emphasize this relationship, showing a positive correlation between `DepressionScore` and `PoorSleepQuality` of approximately 0.434.
 
-**sig?**
-
 
 ```{r}
 cor.test(SleepStudy$PoorSleepQuality, SleepStudy$DepressionScore)
@@ -431,9 +431,8 @@ ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = Depres
 
 ##### Anxiety
 
-The exploration extends to anxiety, where we examine how anxiety levels influence `PoorSleepQuality`. 
+The exploration extends to anxiety, where we examine how `AnxietyStatus` influence `PoorSleepQuality`. With a glance at the side-by-side boxplots below there is an evident trend where as the anxiety level increases the poor sleep quality also increases. This suggests a strong correlation with a higher anxiety score and deficiency of quality of sleep.
 
-**boxplot?**
 
 
 ```{r}
@@ -473,7 +472,8 @@ ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietySt
 
 ##### Stress
 
-**boxplot? data?**
+Turning attention to stress, our analysis demonstrates a similar trend – higher stress levels are associated with poorer sleep quality. The side-by-side boxplot visually represents this correlation, as we see the median increase as the stress level jumps from normal to severe. This emphasizes the impact of stress on the sleep experiences of the surveyed individuals.
+
 
 
 ```{r}
@@ -490,7 +490,7 @@ SleepStudy %>%
        title = "Poor Sleep Quality Aggregated by Stress Level Among College Students")
 ```
 
-Turning attention to stress, our analysis demonstrates a similar trend – higher stress levels are associated with poorer sleep quality. The scatterplot visually represents this correlation of approximately 0.328, emphasizing the impact of stress on the sleep experiences of the surveyed individuals.
+Furthermore, the scatterplot visually represents this correlation of approximately 0.328, emphasizing the impact of stress on the sleep experiences of the surveyed individuals.
 
 
 ```{r}
@@ -512,9 +512,7 @@ ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
 
 #### Alcohol
 
-Investigating the relationship between alcohol consumption and `PoorSleepQuality`, our refined analysis accounts for variations in self-reported drinking labels. The boxplot illustrates a nuanced pattern, suggesting that while there is some variation, the level of alcohol use alone may not be a robust significant of `PoorSleepQuality`.
-
-**what else sig?**
+Investigating the relationship between alcohol consumption and `PoorSleepQuality`, our refined analysis accounts for variations in self-reported drinking labels. The boxplot illustrates a nuanced pattern, suggesting that while there is some variation, the level of alcohol use alone may not be a robust predictor of `PoorSleepQuality`.
 
 
 ```{r}
@@ -553,7 +551,8 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
 
-**add*
+In our comprehensive exploration of college students' sleep quality, we turn our attention to academic factors. This segment of our analysis delves into the potential impact of academic performance, class attendance, course schedules, and other educational variables on the sleep patterns of the surveyed students. By examining these academic factors, we aim to discern any noteworthy correlations or trends that may shed light on the intricate relationship between academic experiences and sleep quality in the college environment.
+
 
 ##### GPA
 
@@ -634,7 +633,8 @@ SleepStudy %>%
 
 ### Quantity of Sleep by Cognitive Function Scores
 
-**add**
+Continuing our investigation into sleep quality among college students, we shift our focus to the Quantity of Sleep by Cognitive Function Scores. This aspect of our analysis explores the potential correlation between the number of hours slept and cognitive function scores on skill tests. By examining these variables, we aim to gain insights into the relationship between sleep duration and cognitive performance, providing a better understanding of the factors influencing the cognitive abilities of the surveyed individuals.
+
 
 ```{r}
 SleepStudy %>% 
@@ -671,15 +671,17 @@ ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
 
 # Data Analysis
 
-**add**
+Next, we will delve into the data anlysis as it relates to our research question, breaking the original question into three separate components. 
+
 
 ## What is the distribution of sleep quality among college students?
 
-**add**
+Throughout our data exploration, we discovered that the distribution of sleep quality among college students fluctuates due to numerous variables. However, the majority of the surveyed students obtained an average quality of sleep, with the data demonstrating a right skew in the histogram. This skew may influence the applicable statistical analyses due to the higher values within this data. 
 
 ## Are there any significant factors affecting sleep quality?
 
-**add**
+In our investigation into the factors influencing sleep quality among college students, several notable variables emerged as significant contributors. These include, but are not limited to, Depression, Anxiety, Stress, and Alcohol Use. Each of these factors plays a distinctive role in influencing sleep quality, contributing to an understanding of the dynamics at play in the aspect of sleep quality. 
+
 
 ## Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
 
