@@ -87,7 +87,8 @@ First to take an initial look at the basic data statistics...
 summary(SleepStudy)
 ```
 
-Next, improve the readability of the dataset...
+Through our preliminary observations of the `SleepStudy` dataset we noticed that several variables were hard to understand at first glance, were not all formatted in the same manner, and one variable should be classified as a character value instead of an integer for data analysis purposes. We used the following code to conduct this data cleaning process, ultimately improving the readability of the dataset.
+
 ```{r}
 # Replace the indicator values in various columns so as to create an easier to read dataset.
 SleepStudy["Gender"][SleepStudy["Gender"] == 0] <- "F"
@@ -119,15 +120,15 @@ SleepStudy$ClassYear <- as.character(SleepStudy$ClassYear)
 sample_n(SleepStudy, 10)
 ```
 
+
 ## Univariate Exploration
 
-**EDIT**
-Embarking on the univariate exploration of the SleepStudy dataframe marks the commencement of a nuanced journey into the intricate realm of sleep patterns among the surveyed individuals. As we initiate this phase of analysis, our focus turns to individual variables, with the goal of comprehensively understanding their distributions, trends, and inherent characteristics. In this exploration, each variable becomes a narrative thread, and the spotlight now shines on unraveling the singular story encapsulated within the data. The initial stages of univariate exploration promise to unveil essential insights into the fundamental aspects of sleep study, setting the stage for a more profound understanding of the intricate dynamics that shape sleep-related behaviors within our dataset.
+Initiating the univariate exploration of the `SleepStudy` dataframe marks the commencement of a nuanced journey into the intricate realm of sleep patterns among the surveyed individuals. As we initiate this phase of analysis, we focus on individual variables, with the goal of comprehensively understanding their distributions, trends, and inherent characteristics. In this exploration, we strive to investigate each variable, unraveling the singular story encapsulated within the data. 
 
 ### Sleep Quality
 
 **EDIT**
-In the realm of sleep study research, the variable "PoorSleepQuality" within the SleepStudy dataframe serves as a crucial metric, encapsulating the diverse experiences of surveyed college students. Representing a quantitative measure of sleep quality, this variable unveils a spectrum of data points where higher values correspond to poorer sleep quality. As we delve into the intricate details of this dataset, we gain valuable insights into the sleep patterns of college students, shedding light on the factors influencing their sleep quality and laying the foundation for a comprehensive analysis of the relationship between various variables and the overall well-being of these individuals.
+In the realm of sleep study research, the variable `PoorSleepQuality` within the `SleepStudy` dataframe serves as a crucial metric, encapsulating the diverse experiences of surveyed college students. Representing a quantitative measure of sleep quality, this variable unveils a spectrum of data points where higher values correspond to poorer sleep quality. As we delve into the intricate details of this dataset, we gain valuable insights into the sleep patterns of college students, shedding light on the factors influencing their sleep quality and laying the foundation for a comprehensive analysis of the relationship between various variables and the overall well-being of these individuals.
 
 ```{r}
 SleepStudy %>% 
@@ -137,7 +138,7 @@ SleepStudy %>%
   labs(x = "", 
        y = "Frequency",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Distribution of Sleep Quality Among College Students")
+       title = "Distribution of Poor Sleep Quality Among College Students")
 ```
 
 
@@ -291,9 +292,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Gender Among College Students")
+       title = "Poor Sleep Quality Aggregated by Gender Among College Students")
 ```
 
 
@@ -308,9 +309,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none")+
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Class Year Among College Students")
+       title = "Poor Sleep Quality Aggregated by Class Year Among College Students")
 ```
 
 
@@ -325,9 +326,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Sleep Habits Among College Students")
+       title = "Poor Sleep Quality Aggregated by Sleep Habits Among College Students")
 ```
 
 
@@ -345,9 +346,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Depression Status Among College Students")
+       title = "Poor Sleep Quality Aggregated by Depression Status Among College Students")
 ```
 
 ```{r}
@@ -356,10 +357,10 @@ ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = Depres
   geom_smooth() +
   theme_minimal() +
   labs(x = "Depression Score",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        color ="Depression Status",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Depression Relavent to Sleep Quality")
+       title = "Depression Relavent to Poor Sleep Quality")
 ```
 
 
@@ -374,9 +375,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Anxiety Status Among College Students")
+       title = "Poor Sleep Quality Aggregated by Anxiety Status Among College Students")
 
 ```
 
@@ -386,10 +387,10 @@ ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietySt
   geom_smooth() +
   theme_minimal() +
   labs(x = "Anxiety Score",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        color ="Anxiety Status",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Anxiety Relavent to Sleep Quality")
+       title = "Anxiety Relavent to Poor Sleep Quality")
 ```
 
 
@@ -404,9 +405,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Stress Level Among College Students")
+       title = "Poor Sleep Quality Aggregated by Stress Level Among College Students")
 ```
 
 ```{r}
@@ -415,10 +416,10 @@ ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
   geom_smooth() +
   theme_minimal() +
   labs(x = "Stress Score",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        color ="Stress Level",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Stess Relavent to Sleep Quality")
+       title = "Stess Relavent to Poor Sleep Quality")
 ```
 
 
@@ -433,8 +434,8 @@ AlcoholUse_Refined %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "", 
-       y = "Sleep Quality", 
-       title = "Sleep Quality by GPA Aggregated by Alcohol Use") 
+       y = "Poor Sleep Quality", 
+       title = "Poor Sleep Quality by GPA Aggregated by Alcohol Use") 
 
 ```
 
@@ -444,10 +445,10 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
   geom_smooth() +
   theme_minimal() +
   labs(x = "Alcoholic Beverages Consumed (per week)",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        color ="Alcohol Consumption Level",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Alcohol Consumption Relavent to Sleep Quality")
+       title = "Alcohol Consumption Relavent to Poor Sleep Quality")
 ```
 
 
@@ -462,9 +463,9 @@ ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
   geom_smooth() +
   theme_minimal() +
   labs(x = "GPA",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "GPA Relavent to Sleep Quality")
+       title = "GPA Relavent to Poor Sleep Quality")
 ```
 
 
@@ -476,9 +477,9 @@ ggplot(AlcoholUse_Refined, aes(x = ClassesMissed, y = PoorSleepQuality)) +
   geom_smooth() +
   theme_minimal() +
   labs(x = "Classes Missed",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Quantity of Classes Missed Relavent to Sleep Quality")
+       title = "Quantity of Classes Missed Relavent to Poor Sleep Quality")
 ```
 
 
@@ -493,9 +494,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by Early Classes Among College Students")
+       title = "Poor Sleep Quality Aggregated by Early Classes Among College Students")
 ```
 
 
@@ -510,9 +511,9 @@ SleepStudy %>%
   theme_bw() +
   theme(legend.position = "none") +
   labs(x = "",
-       y = "Sleep Quality",
+       y = "Poor Sleep Quality",
        caption = "Data Source: SleepStudy dataframe",
-       title = "Sleep Quality Aggregated by All Nighters Among College Students")
+       title = "Poor Sleep Quality Aggregated by All Nighters Among College Students")
 ```
 
 
