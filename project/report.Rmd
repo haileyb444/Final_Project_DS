@@ -318,9 +318,11 @@ Commencing the multivariate exploration within the `SleepStudy` dataframe denote
 
 ### Sleep Quality by Significant Factors
 
+**add**
 
 #### Demographics {.tabset .tabset-fade .tabset-pills}
 
+**add**
 
 ##### Gender
 
@@ -384,6 +386,7 @@ SleepStudy %>%
 
 #### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
+**add**
 
 ##### Depression
 
@@ -405,6 +408,8 @@ SleepStudy %>%
 ```
 
 A scatter plot and regression line further emphasize this relationship, showing a positive correlation between `DepressionScore` and `PoorSleepQuality` of approximately 0.434.
+
+**sig?**
 
 
 ```{r}
@@ -428,6 +433,8 @@ ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = Depres
 
 The exploration extends to anxiety, where we examine how anxiety levels influence `PoorSleepQuality`. 
 
+**boxplot?**
+
 
 ```{r}
 SleepStudy %>% 
@@ -445,6 +452,7 @@ SleepStudy %>%
 ```
 
 The analysis suggests a positive correlation, indicating that as anxiety scores increase, sleep quality tends to decline. This insight underscores the intricate connection between mental health and sleep patterns among college students.
+
 
 ```{r}
 cor.test(SleepStudy$PoorSleepQuality, SleepStudy$AnxietyScore)
@@ -465,7 +473,7 @@ ggplot(SleepStudy, aes(x = AnxietyScore, y = PoorSleepQuality, color = AnxietySt
 
 ##### Stress
 
-
+**boxplot? data?**
 
 
 ```{r}
@@ -506,6 +514,8 @@ ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
 
 Investigating the relationship between alcohol consumption and `PoorSleepQuality`, our refined analysis accounts for variations in self-reported drinking labels. The boxplot illustrates a nuanced pattern, suggesting that while there is some variation, the level of alcohol use alone may not be a robust significant of `PoorSleepQuality`.
 
+**what else sig?**
+
 
 ```{r}
 AlcoholUse_Refined %>% 
@@ -543,10 +553,11 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 
 #### Academic Factors {.tabset .tabset-fade .tabset-pills}
 
+**add*
 
 ##### GPA
 
-Examining the interplay between academic performance and sleep quality, our analysis reveals a subtle trend. Students with higher GPAs tend to exhibit slightly better sleep quality, as depicted by the boxplot. While the relationship is not stark, it suggests a potential link between academic success and sleep quality among college students.
+Examining the interplay between academic performance and sleep quality, our analysis reveals a subtle trend. Students with higher GPAs tend to exhibit slightly better sleep quality, as depicted by the scatterplot While the relationship is not stark, it suggests a potential link between academic success and sleep quality among college students.
 
 ```{r}
 ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
@@ -562,7 +573,7 @@ ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
 
 ##### Classes Missed
 
-The exploration extends to the number of classes missed and its impact on sleep quality. The scatterplot indicates that students who miss more classes tend to experience poorer sleep quality, highlighting a potential connection between attendance, academic engagement, and sleep disturbances. With a positive correlation score of approximately 0.299, the data suggests that as the quanity of classes missed increases, the quality of sleep worsens.
+The exploration extends to the number of classes missed and its impact on sleep quality. The scatterplot indicates that students who miss more classes tend to experience poorer sleep quality, highlighting a potential connection between attendance, academic engagement, and sleep disturbances. With a positive correlation score of approximately 0.299, the data suggests that as the quantity of classes missed increases, the quality of sleep worsens.
 
 
 ```{r}
@@ -623,7 +634,7 @@ SleepStudy %>%
 
 ### Quantity of Sleep by Cognitive Function Scores
 
-
+**add**
 
 ```{r}
 SleepStudy %>% 
@@ -655,20 +666,20 @@ ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
        caption = "Data Source: SleepStudy dataframe",
        title = "Cognition Z Score Relavent to Quantity of Average Sleep")
 ```
-**EDIT: Different Position?**
-Examining the relationship between the quantity of sleep and cognitive function scores, a correlation test was conducted. The test resulted in a correlation coefficient of -0.0239. Based on this correlation coefficient, it indicates a very slight negative correlation between the average hours of sleep and cognitive function scores. However, this correlation is so close enough to zero that it may suggest a weak relationship. In statistical terms, the correlation is not statistically significant, as evidenced by the p-value of 0.7057, which is greater than the commonly used significance level of 0.05.
 
-Therefore, while there is a negative trend (worse sleep associated with slightly lower cognitive function scores), the relationship is too weak to draw any meaningful conclusions from it nor make predictions based on these variables. Other factors that weren’t considered in this analysis might play a more substantial role in influencing cognitive function scores among college students. Whereas in this case we interpret correlation coefficients in the context of just the statistical significance to draw a conclusion about the relationships between such variables.
 <br>
 
 # Data Analysis
 
+**add**
 
 ## What is the distribution of sleep quality among college students?
 
+**add**
 
 ## Are there any significant factors affecting sleep quality?
 
+**add**
 
 ## Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
 
