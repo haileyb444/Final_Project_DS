@@ -526,6 +526,10 @@ ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
 ##### Classes Missed
 
 ```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$ClassesMissed)
+```
+
+```{r}
 ggplot(AlcoholUse_Refined, aes(x = ClassesMissed, y = PoorSleepQuality)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
@@ -598,6 +602,10 @@ ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
        caption = "Data Source: SleepStudy dataframe",
        title = "Cognition Z Score Relavent to Quantity of Average Sleep")
 ```
+**EDIT: Different Position?**
+Examining the relationship between the quantity of sleep and cognitive function scores, a correlation test was conducted. The test resulted in a correlation coefficient of -0.0239. Based on this correlation coefficient, it indicates a very slight negative correlation between the average hours of sleep and cognitive function scores. However, this correlation is so close enough to zero that it may suggest a weak relationship. In statistical terms, the correlation is not statistically significant, as evidenced by the p-value of 0.7057, which is greater than the commonly used significance level of 0.05.
+
+Therefore, while there is a negative trend (worse sleep associated with slightly lower cognitive function scores), the relationship is too weak to draw any meaningful conclusions from it nor make predictions based on these variables. Other factors that weren’t considered in this analysis might play a more substantial role in influencing cognitive function scores among college students. Whereas in this case we interpret correlation coefficients in the context of just the statistical significance to draw a conclusion about the relationships between such variables.
 <br>
 
 # Data Analysis
