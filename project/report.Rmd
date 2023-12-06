@@ -247,7 +247,7 @@ ggplot(data = SleepStudy) +
 
 #### Stress
 
-Directing our focus to the variable "stress," the analysis will thoroughly explore the distribution of stress levels among surveyed college students. This examination aims to uncover how individuals are distributed across different categories or levels of stress, providing insights into the prevalence and varying degrees of stress experiences within the dataset.
+Directing our focus to the variables `Stress` and `StressScore`, the analysis will thoroughly explore the distribution of stress levels among surveyed college students. This examination aims to uncover how individuals are distributed across different categories or levels of stress, providing insights into the prevalence and varying degrees of stress experiences within the dataset.
 
 Notice that while the majority of the surveyed population lies within the normal level of stress, there is a significant quantity of individuals with high stress levels. Furthermore, as the stress score increases, the level worsens as seen in the graph. 
 
@@ -264,6 +264,11 @@ ggplot(data = SleepStudy) +
 
 
 ### Alcohol
+
+The forthcoming analysis will center on the variables`AlcoholUse` and `Drinks`, exploring its distribution among surveyed college students. This investigation seeks to unveil patterns and prevalence levels related to drinking habits, offering valuable insights into behaviors associated with alcohol use within the dataset.
+
+Note that the students in the sleep survey self-reported their level of alcohol use (`AlcoholUse`). This causes variations to occur as each individual's understanding and criteria for the labels differ. For example, one student reported their alcohol use as "light" while stating that they drank an average of 24 alcoholic beverages per week while another student reported their alcohol use as "heavy" while drinking an average of 5 alcoholic beverages per week.
+
 ```{r}
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = Drinks, fill = AlcoholUse)) +
@@ -274,8 +279,6 @@ ggplot(data = SleepStudy) +
        caption = "Data Source: SleepStudy dataframe",
        title = "Distribution of Alcohol Consumption Among College Students") 
 ```
-
-Note that the students in the sleep survey self-reported their level of alcohol use (`AlcoholUse`). This causes variations to occur as each individual's understanding and criteria for the labels differ. For example, one student reported their alcohol use as "light" while stating that they drank an average of 24 alcoholic beverages per week while another student reported their alcohol use as "heavy" while drinking an average of 5 alcoholic beverages per week.
 
 
 We have standardized these labels as it relates to the dataset so as to provide a more accurate result for the distribution of alcoholic beverages consumed on a weekly basis by college students and their drinking significance labels.
@@ -288,6 +291,7 @@ AlcoholUse_Refined <- SleepStudy %>%
                                             ifelse(Drinks <= 9, "Moderate", "Heavy"))))
 AlcoholUse_Refined
 ```
+Below illustrates the alcohol distribution among the surveyed college students using the standardized `AlcoholUse_Refined` variable so as to provide more a accurate analysis and depiction of the dataset.
 
 ```{r}
 ggplot(data = AlcoholUse_Refined) +
@@ -303,8 +307,7 @@ ggplot(data = AlcoholUse_Refined) +
 
 ## Multivariate Exploration
 
-**EDIT**
-Venturing into the realm of multivariate exploration within the SleepStudy dataframe marks a pivotal juncture in our investigative journey. Unlike the solitary focus of univariate analysis, this phase invites us to navigate the intricate interplay among various variables, unlocking a mosaic of insights into the nuanced landscape of sleep patterns. As we delve into the complexities of these interconnected factors, our goal is to unearth hidden patterns, correlations, and dependencies that collectively shape the diverse tapestry of sleep-related behaviors. This multifaceted exploration transcends the confines of individual variables, providing a holistic panorama that enriches our comprehension of the intricate dynamics governing the sleep experiences of the surveyed individuals. Each variable, in this context, contributes a unique hue to the comprehensive canvas of understanding, revealing a story that extends beyond isolated metrics and into the intricacies of sleep study.
+Commencing the multivariate exploration within the `SleepStudy` dataframe denotes a significant phase in our analyses. Unlike the solitary focus of univariate analysis, this phase allows us to navigate the intricate relationships between numerous variables. As we delve into the complexities of these interconnected factors, our goal is to unearth hidden patterns and correlations that collectively influence sleep-related behaviors within the surveyed population.
 
 ### Sleep Quality by Significant Factors
 
