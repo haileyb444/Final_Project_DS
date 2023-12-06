@@ -150,6 +150,9 @@ The next step involves scrutinizing pertinent demographic variables, including g
 
 
 #### Gender
+Now, we turn our attention specifically to the variable `Gender` within the surveyed college student population. This entails a detailed exploration of the distribution of gender categories to gain a comprehensive understanding of the demographic landscape. Analyzing gender patterns contributes valuable insights into potential disparities or trends within the dataset.
+
+Notice that among the surveyed college students, there is an increased population of females compared to males. However, this population difference is not significant enough to cause the data to be skewed. 
 
 ```{r}
 ggplot(data = SleepStudy) +
@@ -165,6 +168,11 @@ ggplot(data = SleepStudy) +
 
 
 #### ClassYear
+
+The following analysis will concentrate on the variable "class year," exploring its distribution among surveyed college students. This focused investigation intends to reveal insights into the demographic composition within each academic level, thereby enhancing our comprehension of potential trends or variations within the dataset.
+
+Notice that while the populations within the `ClassYear` variable are relatively similar, there is a significant increase in the population in the second years. Should these individuals have particular habits or interests, this may influence the data more than another observation in the first, third, or fourth years.
+
 ```{r}
 ggplot(data = SleepStudy) +
   geom_bar(aes(x = ClassYear, fill = ClassYear)) +
