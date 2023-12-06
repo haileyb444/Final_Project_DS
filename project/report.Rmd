@@ -386,6 +386,10 @@ SleepStudy %>%
 ```
 
 ```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$DepressionScore)
+```
+
+```{r}
 ggplot(SleepStudy, aes(x = DepressionScore, y = PoorSleepQuality, color = DepressionStatus)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
@@ -413,6 +417,10 @@ SleepStudy %>%
        caption = "Data Source: SleepStudy dataframe",
        title = "Poor Sleep Quality Aggregated by Anxiety Status Among College Students")
 
+```
+
+```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$AnxietyScore)
 ```
 
 ```{r}
@@ -445,6 +453,10 @@ SleepStudy %>%
 ```
 
 ```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$StressScore)
+```
+
+```{r}
 ggplot(SleepStudy, aes(x = StressScore, y = PoorSleepQuality, color = Stress)) +
   geom_point(alpha = 0.5) +
   geom_smooth() +
@@ -469,8 +481,12 @@ AlcoholUse_Refined %>%
   theme(legend.position = "none") +
   labs(x = "", 
        y = "Poor Sleep Quality", 
-       title = "Poor Sleep Quality by GPA Aggregated by Alcohol Use") 
+       caption = "Data Source: SleepStudy dataframe",
+       title = "Poor Sleep Quality Aggregated by Alcohol Consumption Among College Students") 
 
+```
+```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$Drinks)
 ```
 
 ```{r}
@@ -490,6 +506,10 @@ ggplot(AlcoholUse_Refined, aes(x = Drinks, y = PoorSleepQuality, color = Alcohol
 
 
 ##### GPA
+
+```{r}
+cor.test(SleepStudy$PoorSleepQuality, SleepStudy$GPA)
+```
 
 ```{r}
 ggplot(AlcoholUse_Refined, aes(x = GPA, y = PoorSleepQuality)) +
@@ -591,16 +611,24 @@ ggplot(SleepStudy, aes(x = CognitionZscore, y = AverageSleep)) +
 
 ## Is there a correlation between the number of hours slept and cognitive function scores on the skill test?
 
+With a correlation score of approximately -0.02 between the variables `AverageSleep` and `CognitionZscore`, it suggests a very weak negative correlation. This indicates that there is a slight tendency for an increase in the number of hours slept to be associated with a slightly lower cognitive function score on the skill test. However, the correlation is so close to zero that the relationship is considered insignificant Therefore, based on this correlation score, it can be concluded that there is essentially no meaningful correlation between the number of hours slept and cognitive function scores on the skill test in the examined dataset. However, there may be other variables present within the dataset with a more significant impact on the average hours slept by the surveyed college students.
+
 <br>
 
 # Conclusion
+
+In conclusion, our exploration into the sleep quality among college students has provided valuable insights into the multifaceted factors influencing their well-being. The comprehensive analysis not only unveiled the distribution patterns of sleep quality but also delved into significant factors such as drinking habits, stress, depression, and anxiety, shedding light on their respective impacts. Furthermore, our investigation explored the correlation between the number of hours slept and cognitive function scores, revealing a nuanced correlation between sleep duration and cognitive performance on skill tests. The findings underscore the intricate relationships between the variables contributing to sleep quality in the surveyed college student population. This holistic understanding is essential for informed interventions and strategies aimed at improving overall well-being and academic success among this demographic.
 
 <br>
 
 # Future Applications
 
+Additional analyses may be done for the `SleepStudy` dataset. Future analyses may consider the implications of sleep patterns and habits on the academic performance of students, considering how to best perform academically considering these variables. Possible inferences may be made considering the probability of a student with a particular sleep habit or mental health status to succeed or fail in college academically, or their probability of drinking compared to other students. As it can be seen through these descriptions, there are still countless analyses to be conducted using this dataset, possibly even incorporating additional data to improve the analyses. Additionally, the college may utilize the results from these analyses, or those similar, to improve their classes and teaching methods to better fit the students as it relates to the data illustrated through the results.
+
 <br>
 
 # Datasets Cited
+
+Our dataset was provided by Professor Reinaldo Sanchez-Arias and can be found [here](https://github.com/reisanar/datasets/blob/master/SleepStudy.csv).
 
 
