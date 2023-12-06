@@ -125,10 +125,12 @@ sample_n(SleepStudy, 10)
 
 Initiating the univariate exploration of the `SleepStudy` dataframe marks the commencement of a nuanced journey into the intricate realm of sleep patterns among the surveyed individuals. As we initiate this phase of analysis, we focus on individual variables, with the goal of comprehensively understanding their distributions, trends, and inherent characteristics. In this exploration, we strive to investigate each variable, unraveling the singular story encapsulated within the data. 
 
+
 ### Sleep Quality
 
-**EDIT**
 In the realm of sleep study research, the variable `PoorSleepQuality` within the `SleepStudy` dataframe serves as a crucial metric, encapsulating the diverse experiences of surveyed college students. Representing a quantitative measure of sleep quality, this variable unveils a spectrum of data points where higher values correspond to poorer sleep quality. As we delve into the intricate details of this dataset, we gain valuable insights into the sleep patterns of college students, shedding light on the factors influencing their sleep quality and laying the foundation for a comprehensive analysis of the relationship between various variables and the overall well-being of these individuals.
+
+The histogram below depicts the distribution of the quality of sleep among college students. The data in this graph is primarily centered around 5 with observations on either end of the spectrum as well. This indicates that most college students get an average to poor quality of sleep. 
 
 ```{r}
 SleepStudy %>% 
@@ -143,6 +145,8 @@ SleepStudy %>%
 
 
 ### Demographics{.tabset .tabset-fade .tabset-pills}
+
+The next step involves scrutinizing pertinent demographic variables, including gender, class year, and sleep habits, to understand their distribution within the surveyed college student population. This analysis aims to uncover patterns and relationships among these key factors.
 
 
 #### Gender
