@@ -186,6 +186,11 @@ ggplot(data = SleepStudy) +
 
 
 #### Sleep Habits
+
+Now directing our attention to the variable `LarkOwl`, a categorical attribute indicating whether an individual identifies as a morning person (Lark), a night owl, or neither. The analysis will delve into the distribution of these sleep habits among surveyed college students. By understanding how individuals categorize their sleep preferences, this examination aims to uncover patterns and variations in sleep habits within the dataset.
+
+Notice that most surveyed students were considered neither, while the populations of those considered Larks or Owls were about the same. This graph may indicate that the `Lark` and `Owl` populations may experience different variations within the dataset compared to those that are not within these populations.
+
 ```{r}
 SleepStudy %>% 
   ggplot() +
@@ -201,8 +206,13 @@ SleepStudy %>%
 
 ### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
+Shifting the focus specifically to the distribution of mental health factors, the analysis will delve into the prevalence and patterns of variables related to stress, depression, and anxiety among surveyed college students. 
 
 #### Depression
+
+Now, honing in on the specific variables `DepressionScore` and `DepressionStatus`, the analysis will delve into the distribution of depression scores and levels among surveyed college students. This examination aims to reveal how individuals are distributed across different categories or levels of depression, shedding light on the prevalence and intensity of depressive experiences within the dataset.
+
+Notice that the distribution of depression among college students lessens as the depression status worsens, indicating that not many of the surveyed students experienced severe depression. As the depression score increases, the status worsens as seen in the graph.
 
 ```{r}
 ggplot(data = SleepStudy) +
@@ -218,6 +228,11 @@ ggplot(data = SleepStudy) +
 
 
 #### Anxiety
+
+The forthcoming analysis zeroes in on the variable `AnxietyStatus` and `AnxietyScore`, delving into its distribution among surveyed college students. This exploration seeks to unveil patterns and prevalence levels related to anxious experiences, offering valuable insights into the mental health dynamics within the dataset.
+
+Notice that, similar to depression, the distribution of anxiety among college students lessens as the anxiety status worsens. Additionally, as the axiety score increases, the status worsens as seen in the graph.
+
 ```{r}
 ggplot(data = SleepStudy) +
   geom_histogram(aes(x = AnxietyScore, fill = AnxietyStatus)) +
@@ -231,6 +246,10 @@ ggplot(data = SleepStudy) +
 
 
 #### Stress
+
+Directing our focus to the variable "stress," the analysis will thoroughly explore the distribution of stress levels among surveyed college students. This examination aims to uncover how individuals are distributed across different categories or levels of stress, providing insights into the prevalence and varying degrees of stress experiences within the dataset.
+
+Notice that while the majority of the surveyed population lies within the normal level of stress, there is a significant quantity of individuals with high stress levels. Furthermore, as the stress score increases, the level worsens as seen in the graph. 
 
 ```{r}
 ggplot(data = SleepStudy) +
