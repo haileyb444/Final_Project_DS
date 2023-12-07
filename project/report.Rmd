@@ -50,7 +50,7 @@ Our project investigates 254 students who were surveyed for this sleep study inc
 
 # Prerequisites
 
-Load the following R packages required for the data analysis...
+Load the following R packages required for the data analysis
 
 ```{r}
 library(tidyverse)
@@ -81,7 +81,7 @@ sample_n(SleepStudy, 10)
 
 # Exploratory Data Analysis
 
-First to take an initial look at the basic data statistics...
+First to take an initial look at the basic data statistics
 
 ```{r}
 summary(SleepStudy)
@@ -320,6 +320,7 @@ Commencing the multivariate exploration within the `SleepStudy` dataframe denote
 
 Shifting our focus to sleep quality by significant factors. Looking at gender distribution as well as class year demographics we get a glimpse on the landscape of college students’ sleep experiences. With a further exploration into mental health factors, it reveals an intricate relationship between depression, anxiety, and stress, and sleep quality. Our analysis extends to alcohol consumption, academic performance metrics like GPA and class attendance, and even diving into all-nighters, unraveling their impact on sleep quality. Additionally, the investigation explores the correlation between the quantity of sleep and cognitive function scores, providing insights into the complex relationship between sleep duration and academic performance. This understanding serves as a foundation for informed strategies aimed at developing improved well-being and academic success among college students.
 
+<br>
 
 #### Demographics {.tabset .tabset-fade .tabset-pills}
 
@@ -385,6 +386,7 @@ SleepStudy %>%
        title = "Poor Sleep Quality Aggregated by Sleep Habits Among College Students")
 ```
 
+<br>
 
 #### Mental Health Factors {.tabset .tabset-fade .tabset-pills}
 
